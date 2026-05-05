@@ -1,1045 +1,157 @@
 /* ============================================================
-   Gazelle Modern V2  —  Multi-palette high-contrast dark theme
-   Load after base style.css
-
-   HOW TO SWITCH PALETTE:
-   On <body> or <html> add one of these classes:
-     (none / default)  = Deep Ocean (teal)
-     .palette-rose     = Midnight Rose (pink/red)
-     .palette-amber    = Forge (amber/orange)
-     .palette-violet   = Nebula (violet/purple)
-     .palette-mono     = Carbon (cool gray/white)
+   GAZELLE MODERN INTEGRATED V2
+   Multi-palette dark theme with full Base.css coverage.
    ============================================================ */
 
-
-/* ── PALETTE 1: Deep Ocean (default — teal/cyan) ─────────── */
-:root,
-.palette-ocean {
-  --bg0: #0c1318;
-  --bg1: #131e26;
-  --bg2: #192835;
-  --bg3: #213344;
-  --bg4: #2a4056;
-  --bg5: #365068;
-
-  --b0: rgba(140, 210, 230, 0.07);
-  --b1: rgba(140, 210, 230, 0.15);
-  --b2: rgba(140, 210, 230, 0.26);
-  --b3: rgba(140, 210, 230, 0.44);
-
-  --t0: #eef7fc;
-  --t1: #c0dae8;
-  --t2: #7aaabb;
-  --t3: #45707f;
-
-  --ac:      #3dd9c0;
-  --ac-rgb:  61, 217, 192;
-  --ac-dim:  rgba(61, 217, 192, 0.13);
-  --ac-glow: rgba(61, 217, 192, 0.22);
-  --ac-text: #0c2e28;
-
-  --ok:   #44d98a;
-  --warn: #f5c542;
-  --err:  #f06070;
+:root, .palette-ocean {
+  --bg0: #0c1318; --bg1: #131e26; --bg2: #192835; --bg3: #213344; --bg4: #2a4056; --bg5: #365068;
+  --b0: rgba(140, 210, 230, 0.07); --b1: rgba(140, 210, 230, 0.15); --b2: rgba(140, 210, 230, 0.26); --b3: rgba(140, 210, 230, 0.44);
+  --t0: #eef7fc; --t1: #c0dae8; --t2: #7aaabb; --t3: #45707f;
+  --ac: #3dd9c0; --ac-rgb: 61, 217, 192; --ac-dim: rgba(61, 217, 192, 0.13); --ac-glow: rgba(61, 217, 192, 0.22); --ac-text: #0c2e28;
+  --ok: #44d98a; --warn: #f5c542; --err: #f06070;
 }
 
-/* ── PALETTE 2: Midnight Rose (pink/magenta) ──────────────── */
 .palette-rose {
-  --bg0: #130f18;
-  --bg1: #1e1428;
-  --bg2: #271b35;
-  --bg3: #322344;
-  --bg4: #422e58;
-  --bg5: #56396e;
-
-  --b0: rgba(220, 150, 210, 0.07);
-  --b1: rgba(220, 150, 210, 0.15);
-  --b2: rgba(220, 150, 210, 0.26);
-  --b3: rgba(220, 150, 210, 0.45);
-
-  --t0: #f8eeff;
-  --t1: #ddc8f0;
-  --t2: #a878c0;
-  --t3: #6a4888;
-
-  --ac:      #e060c8;
-  --ac-rgb:  224, 96, 200;
-  --ac-dim:  rgba(224, 96, 200, 0.13);
-  --ac-glow: rgba(224, 96, 200, 0.22);
-  --ac-text: #2a0820;
-
-  --ok:   #44d98a;
-  --warn: #f5c542;
-  --err:  #f07070;
-}
-
-/* ── PALETTE 3: Forge (amber/orange) ─────────────────────── */
-.palette-amber {
-  --bg0: #130e08;
-  --bg1: #1f1610;
-  --bg2: #291e14;
-  --bg3: #352719;
-  --bg4: #473422;
-  --bg5: #5c4430;
-
-  --b0: rgba(230, 180, 100, 0.07);
-  --b1: rgba(230, 180, 100, 0.15);
-  --b2: rgba(230, 180, 100, 0.26);
-  --b3: rgba(230, 180, 100, 0.45);
-
-  --t0: #fdf4e8;
-  --t1: #e8d4b0;
-  --t2: #b89060;
-  --t3: #7a5c38;
-
-  --ac:      #f5a030;
-  --ac-rgb:  245, 160, 48;
-  --ac-dim:  rgba(245, 160, 48, 0.13);
-  --ac-glow: rgba(245, 160, 48, 0.22);
-  --ac-text: #2a1400;
-
-  --ok:   #44d98a;
-  --warn: #f5c542;
-  --err:  #f07070;
-}
-
-/* ── PALETTE 4: Nebula (violet/indigo) ───────────────────── */
-.palette-violet {
-  --bg0: #0d0c18;
-  --bg1: #131225;
-  --bg2: #1a1830;
-  --bg3: #22203e;
-  --bg4: #2e2b54;
-  --bg5: #3c3868;
-
-  --b0: rgba(160, 150, 240, 0.07);
-  --b1: rgba(160, 150, 240, 0.15);
-  --b2: rgba(160, 150, 240, 0.26);
-  --b3: rgba(160, 150, 240, 0.45);
-
-  --t0: #f0eeff;
-  --t1: #cac4f4;
-  --t2: #8880c8;
-  --t3: #524e8a;
-
-  --ac:      #9d88f8;
-  --ac-rgb:  157, 136, 248;
-  --ac-dim:  rgba(157, 136, 248, 0.13);
-  --ac-glow: rgba(157, 136, 248, 0.22);
-  --ac-text: #100e28;
-
-  --ok:   #44d98a;
-  --warn: #f5c542;
-  --err:  #f07070;
-}
-
-/* ── PALETTE 5: Carbon (cool gray/white) ─────────────────── */
-.palette-mono {
-  --bg0: #0a0c0e;
-  --bg1: #121518;
-  --bg2: #1a1e22;
-  --bg3: #22272c;
-  --bg4: #2e343a;
-  --bg5: #3c444c;
-
-  --b0: rgba(180, 200, 210, 0.07);
-  --b1: rgba(180, 200, 210, 0.14);
-  --b2: rgba(180, 200, 210, 0.24);
-  --b3: rgba(180, 200, 210, 0.40);
-
-  --t0: #f4f6f8;
-  --t1: #c8d2da;
-  --t2: #7e909c;
-  --t3: #485660;
-
-  --ac:      #68d0f0;
-  --ac-rgb:  104, 208, 240;
-  --ac-dim:  rgba(104, 208, 240, 0.12);
-  --ac-glow: rgba(104, 208, 240, 0.20);
-  --ac-text: #061820;
-
-  --ok:   #44d98a;
-  --warn: #f5c542;
-  --err:  #f07070;
-}
-
-/* ============================================================
-   ACTIVE PALETTE (for sites where you CANNOT add body/html class)
-   Keep ONLY ONE :root block active below.
-   ============================================================ */
-
-/* Active: Deep Ocean */
-
-:root {
-  --bg0: #0c1318;
-  --bg1: #131e26;
-  --bg2: #192835;
-  --bg3: #213344;
-  --bg4: #2a4056;
-  --bg5: #365068;
-
-  --b0: rgba(140, 210, 230, 0.07);
-  --b1: rgba(140, 210, 230, 0.15);
-  --b2: rgba(140, 210, 230, 0.26);
-  --b3: rgba(140, 210, 230, 0.44);
-
-  --t0: #eef7fc;
-  --t1: #c0dae8;
-  --t2: #7aaabb;
-  --t3: #45707f;
-
-  --ac:      #3dd9c0;
-  --ac-rgb:  61, 217, 192;
-  --ac-dim:  rgba(61, 217, 192, 0.13);
-  --ac-glow: rgba(61, 217, 192, 0.22);
-  --ac-text: #0c2e28;
-
-  --ok:   #44d98a;
-  --warn: #f5c542;
-  --err:  #f06070;
-}
-
-/* Option: Midnight Rose */
-/*
-:root {
   --bg0: #130f18; --bg1: #1e1428; --bg2: #271b35; --bg3: #322344; --bg4: #422e58; --bg5: #56396e;
   --b0: rgba(220, 150, 210, 0.07); --b1: rgba(220, 150, 210, 0.15); --b2: rgba(220, 150, 210, 0.26); --b3: rgba(220, 150, 210, 0.45);
   --t0: #f8eeff; --t1: #ddc8f0; --t2: #a878c0; --t3: #6a4888;
   --ac: #e060c8; --ac-rgb: 224, 96, 200; --ac-dim: rgba(224, 96, 200, 0.13); --ac-glow: rgba(224, 96, 200, 0.22); --ac-text: #2a0820;
   --ok: #44d98a; --warn: #f5c542; --err: #f07070;
 }
-*/
 
-/* Option: Forge Amber */
-/*
-:root {
+.palette-amber {
   --bg0: #130e08; --bg1: #1f1610; --bg2: #291e14; --bg3: #352719; --bg4: #473422; --bg5: #5c4430;
   --b0: rgba(230, 180, 100, 0.07); --b1: rgba(230, 180, 100, 0.15); --b2: rgba(230, 180, 100, 0.26); --b3: rgba(230, 180, 100, 0.45);
   --t0: #fdf4e8; --t1: #e8d4b0; --t2: #b89060; --t3: #7a5c38;
   --ac: #f5a030; --ac-rgb: 245, 160, 48; --ac-dim: rgba(245, 160, 48, 0.13); --ac-glow: rgba(245, 160, 48, 0.22); --ac-text: #2a1400;
   --ok: #44d98a; --warn: #f5c542; --err: #f07070;
 }
-*/
 
-/* Option: Nebula Violet */
-/*
-:root {
-  --bg0: #0d0c18; --bg1: #131225; --bg2: #1a1830; --bg3: #22203e; --bg4: #2e2b54; --bg5: #3c3868;
-  --b0: rgba(160, 150, 240, 0.07); --b1: rgba(160, 150, 240, 0.15); --b2: rgba(160, 150, 240, 0.26); --b3: rgba(160, 150, 240, 0.45);
-  --t0: #f0eeff; --t1: #cac4f4; --t2: #8880c8; --t3: #524e8a;
-  --ac: #9d88f8; --ac-rgb: 157, 136, 248; --ac-dim: rgba(157, 136, 248, 0.13); --ac-glow: rgba(157, 136, 248, 0.22); --ac-text: #100e28;
-  --ok: #44d98a; --warn: #f5c542; --err: #f07070;
-}
-*/
-
-/* Option: Carbon Mono */
-/*
-:root {
-  --bg0: #0a0c0e; --bg1: #121518; --bg2: #1a1e22; --bg3: #22272c; --bg4: #2e343a; --bg5: #3c444c;
-  --b0: rgba(180, 200, 210, 0.07); --b1: rgba(180, 200, 210, 0.14); --b2: rgba(180, 200, 210, 0.24); --b3: rgba(180, 200, 210, 0.40);
-  --t0: #f4f6f8; --t1: #c8d2da; --t2: #7e909c; --t3: #485660;
-  --ac: #68d0f0; --ac-rgb: 104, 208, 240; --ac-dim: rgba(104, 208, 240, 0.12); --ac-glow: rgba(104, 208, 240, 0.20); --ac-text: #061820;
-  --ok: #44d98a; --warn: #f5c542; --err: #f07070;
-}
-*/
-
-
-/* ═══════════════════════════════════════════════════════════ */
-/*  GLOBAL STYLES (use variables only — all palettes benefit) */
-/* ═══════════════════════════════════════════════════════════ */
-
-*, *::before, *::after { box-sizing: border-box; }
-
+/* Base Body Styles */
 body, .tdhack {
   background-color: var(--bg0) !important;
+  background-image: url('images/bg.png');
   color: var(--t1);
   font-size: 13.5px;
   line-height: 1.65;
 }
 
-#wrapper {
-  max-width: 1720px;
-  margin: 0 auto !important;
-}
-
-
-/* ─────────────────────────────────────────────────────────── */
-/*  TYPOGRAPHY                                                 */
-/* ─────────────────────────────────────────────────────────── */
-
+/* Typography */
 h1, h2, h3, h4, h5, h6,
-.thin h2, .thin h3,
-#content h2,
-.forum_category_title h2,
-.forum_category_title h3 {
+.thin h2, .thin h3, #content h2,
+.forum_category_title h2, .forum_category_title h3 {
   color: var(--t0) !important;
   font-weight: 700;
-  letter-spacing: 0.01em;
 }
 
-#content h2, .thin h2 { font-size: 1.2rem; }
-.thin h3               { font-size: 1.05rem; }
-
-
-/* ─────────────────────────────────────────────────────────── */
-/*  LINKS                                                      */
-/* ─────────────────────────────────────────────────────────── */
-
+/* Link System */
 a, a:link, a:visited,
-td a,
-.head a,
 #torrents .torrent_table a[onclick*=toggle],
 .box.filter_torrents .head a,
 .forum_post .colhead a,
-.forum_post .colhead_dark a,
+.colhead a,
 #inbox .box .head a,
 #index .sidebar .stats.nobullet a,
 tr.unreadpm a,
-#summary .ui-widget-content a,
-#wrapper .alert-bars a,
-tr.inbox-message--unread td a,
-.group_info > a:nth-child(2n),
-.group_info > a:nth-child(3n) {
+.group_info > a:nth-child(n) {
   color: var(--t0) !important;
   text-decoration: none;
   transition: color 0.14s;
 }
 
-.box_info .stats.nobullet li a { color: var(--t0) !important; }
-
-a:hover, td a:hover, #header a.username {
+a:hover, #header a.username {
   color: var(--ac) !important;
 }
 
-a:active { color: var(--err) !important; }
-
-.forum_post .body a:not([data-quote-jump]) {
-  color: rgba(var(--ac-rgb), 0.85) !important;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  text-decoration-color: rgba(var(--ac-rgb), 0.3);
-}
-
-.forum_post .body a:not([data-quote-jump]):hover {
-  color: var(--ac) !important;
-}
-
-a.simple-tabs__link--active,
-.selected_link {
-  color: var(--ac) !important;
-  font-weight: 700 !important;
-  border-bottom: 2px solid var(--ac);
-  padding-bottom: 1px;
-}
-
-#header > #menu ul > li.active > a { color: var(--ac) !important; }
-
-
-/* ─────────────────────────────────────────────────────────── */
-/*  NAVIGATION                                                 */
-/* ─────────────────────────────────────────────────────────── */
-
-#menu {
-  background: var(--bg1) !important;
-  border-bottom: 1px solid var(--b2);
-}
-
-#header > #menu ul > li > a {
-  color: var(--t1) !important;
-  border-radius: 5px;
-  padding: 4px 10px;
-  transition: background 0.15s, color 0.15s;
-}
-
-#header > #menu ul > li > a:hover {
-  background: var(--ac-dim) !important;
-  color: var(--ac) !important;
-}
-
-#header > #menu ul > li.active > a {
-  background: var(--ac-dim) !important;
-  color: var(--ac) !important;
-  font-weight: 600;
-}
-
-.nav_dropdown > div {
-  background: var(--bg0) !important;
-  border: 1px solid var(--b3);
-  border-radius: 12px;
-  box-shadow: 0 8px 28px rgba(0,0,0,0.5);
-}
-
-#searchbars-wrapper {
-  background: var(--bg1) !important;
-  border-top: 1px solid var(--b1);
-  border-bottom: 1px solid var(--b2);
-}
-
-.alertbar { background: var(--bg1); }
-
-
-/* ─────────────────────────────────────────────────────────── */
-/*  USER INFO BAR                                              */
-/* ─────────────────────────────────────────────────────────── */
-/**
-#userinfo,
-#userinfo_major,
-#userinfo_minor,
-.userinfo,
-#header .username-container,
-#nav_userinfo {
-  background: transparent !important;
-  border: none !important;
-}
-
-#userinfo_stats,
-#userinfo_major,
-#userinfo_minor {
-  color: var(--t2) !important;
-  font-size: 12px;
-}
-
-#userinfo_stats a,
-#userinfo_major a,
-#userinfo_minor a,
-#nav_userinfo a {
-  color: var(--t1) !important;
-  font-weight: 500;
-  padding: 2px 6px;
-  border-radius: 4px;
-  transition: background 0.14s, color 0.14s;
-}
-
-#userinfo_stats a:hover,
-#userinfo_major a:hover,
-#userinfo_minor a:hover,
-#nav_userinfo a:hover {
-  background: var(--ac-dim) !important;
-  color: var(--ac) !important;
-}
-
-// Ratio / upload / download numbers 
-#userinfo_stats .stat,
-.ratio-bar-container,
-#ratio {
-  color: var(--t0) !important;
-  font-weight: 700;
-}
-
-.upload_stat,
-.stats_upload {
-  color: var(--ok) !important;
-  font-weight: 700;
-}
-
-.download_stat,
-.stats_download {
+a:active {
   color: var(--err) !important;
-  font-weight: 700;
 }
 
-// Ratio bar
-#ratio_bar,
-.ratio_bar {
-  background: var(--bg3);
-  border: 1px solid var(--b2);
-  border-radius: 999px;
-  overflow: hidden;
-  height: 6px;
+.selected_link, a.simple-tabs__link--active {
+  color: var(--ac) !important;
+  font-weight: bold !important;
 }
 
-#ratio_bar > div,
-.ratio_bar > div {
-  background: var(--ac);
-  border-radius: 999px;
-  height: 100%;
-}
-*/
-
-/* ─────────────────────────────────────────────────────────── */
-/*  PANELS / BOXES                                             */
-/* ─────────────────────────────────────────────────────────── */
-
-.panel__body,
-.sidebar .box,
-.news_post .pad,
-.main_column .box,
-.main_column2 .box,
-#scontent .box,
-.main-column .box,
-.main-column2 .box,
-#inbox .box,
-#blog .box,
-#staffblog .box {
+/* Containers & Boxes */
+.panel__body, .sidebar .box, .news_post .pad,
+.main_column .box, .main_column2 .box,
+#scontent .box, .box.pad, #blog .box, 
+#inbox .box, .desc, .box.torrent_description {
   background: var(--bg2) !important;
   border: 1px solid var(--b1) !important;
-  border-radius: 13px !important;
-  box-shadow: 0 3px 16px rgba(0,0,0,0.35) !important;
-  overflow: hidden;
+  border-radius: 12px;
 }
 
-.box.thin.clear,
-.box.pad,
-.box.torrent_description,
-form.search_form,
-div#quickreplytext,
-.desc,
-#inbox .box .body,
-#inbox .box #buttons .field_div.textarea_wrap {
+/* Headers */
+.head, .colhead td, .colhead_dark td, tr.colhead, 
+tr.colhead_dark, thead th, .panel__heading {
+  background: var(--bg4) !important;
+  color: var(--t0) !important;
+  border-bottom: 2px solid var(--bg0) !important;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+/* Tables */
+td {
   background: var(--bg2) !important;
+  border-bottom: 1px solid var(--b0) !important;
 }
-
-td { background: var(--bg2) !important; }
 
 .group td { background: var(--bg1) !important; }
 
-
-/* ─────────────────────────────────────────────────────────── */
-/*  BOX HEADERS / COLHEADS                                     */
-/* ─────────────────────────────────────────────────────────── */
-
-.head,
-.main_column .box .head,
-.sidebar .box .head,
-.toggleable-search-form__toggler-container,
-thead th,
-.forum-post__heading,
-.panel__heading,
-.box.filter_torrents .head,
-#blog .head,
-.colhead td,
-.colhead_dark td,
-tr.colhead,
-tr.colhead_dark,
-#inbox .box .head,
-#reply_box h3,
-#inbox form .send_form #quickpost h3,
-.main_column .box .head.colhead_dark,
-.box.news_post .head,
-.head.colhead_dark {
-  background: var(--bg4) !important;
-  color: var(--t0) !important;
-  border-bottom: 1px solid var(--b2) !important;
-  /* remove any top/side borders that cause double-line artifacts */
-  border-top: none !important;
-  border-left: none !important;
-  border-right: none !important;
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+.torrent_table tr:hover td, .winnerTable > tbody > tr:hover > td:not(.tdhack) {
+  background-color: var(--ac-dim) !important;
 }
 
-.head a, .colhead a, .colhead_dark a {
-  color: var(--t0) !important;
-}
-
-tr.colhead,
-tr.colhead_dark {
-  background: var(--bg4) !important;
-  color: var(--t0);
-  /* collapse any extra borders on the tr itself */
-  border: none !important;
-}
-
-/* Ensure header cells have no double-border on sides/top */
-tr.colhead td,
-tr.colhead_dark td,
-.colhead td,
-.colhead_dark td,
-thead th {
-  border-top: none !important;
-  border-left: none !important;
-  border-right: none !important;
-  border-bottom: 1px solid var(--b2) !important;
-}
-
-
-/* ─────────────────────────────────────────────────────────── */
-/*  FORUM CATEGORY SEPARATOR (the label between forum groups) */
-/* ─────────────────────────────────────────────────────────── */
-
-.forum_category_title {
-  background: transparent;
-  padding: 0 2px 6px;
-  margin: 24px 0 6px;
-  border-bottom: 1px solid var(--b2);
-  color: var(--ac) !important;
-  font-size: 0.76rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-/* The wrapping table / container — no extra borders */
-#forums .forum_index {
-  border: 1px solid var(--b2);
-  border-radius: 13px;
-  overflow: hidden;
-  box-shadow: 0 3px 16px rgba(0,0,0,0.35);
-  /* collapse inner cell borders so rounded corners look clean */
-  border-collapse: separate;
-  border-spacing: 0;
-}
-
-#forums .forum_index thead th {
-  background: var(--bg4) !important;
-  color: var(--t0) !important;
-  border-top: none !important;
-  border-left: none !important;
-  border-right: none !important;
-  border-bottom: 1px solid var(--b2) !important;
-  font-weight: 700;
-  font-size: 0.8rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  padding: 9px 12px;
-}
-
-#forums .forum_index tbody tr td {
-  background: var(--bg2) !important;
-  color: var(--t1);
-  border-top: none !important;
-  border-left: none !important;
-  border-right: none !important;
-  border-bottom: 1px solid var(--b0) !important;
-  transition: background 0.14s;
-  padding: 8px 12px;
-}
-
-#forums .forum_index tbody tr:last-child td {
-  border-bottom: none !important;
-}
-
-#forums .forum_index tbody tr:nth-child(odd) td {
-  background: var(--bg1) !important;
-}
-
-#forums .forum_index tbody tr:hover td {
-  background: var(--ac-dim) !important;
-}
-
-#forums .forum_index h4 a     { color: var(--t0) !important; font-weight: 600; }
-#forums .forum_index .last_topic a { color: var(--t1) !important; }
-
-#forums .forum_index .last_poster,
-#forums .forum_index .last_poster .time {
-  color: var(--t3) !important;
-  font-size: 0.88rem;
-}
-
-#forums .forum_index .number_column { color: var(--t0); font-weight: 700; }
-
-td.unread:before, td.unread_sticky:before,
-td.unread_locked:before, td.unread_locked_sticky:before {
-  color: var(--warn) !important;
-}
-
-td.read:before { color: var(--t3) !important; }
-
-
-/* ─────────────────────────────────────────────────────────── */
-/*  FORUM POSTS                                                */
-/* ─────────────────────────────────────────────────────────── */
-
-#forums .forum_post {
-  border: 1px solid var(--b2);
-  border-radius: 13px;
-  overflow: hidden;
-  box-shadow: 0 3px 16px rgba(0,0,0,0.3);
-  margin-bottom: 12px;
-}
-
-#forums .forum_post .colhead td,
-#forums .forum_post .colhead_dark td {
-  background: var(--bg4) !important;
-  color: var(--t0) !important;
-  border-top: none !important;
-  border-left: none !important;
-  border-right: none !important;
-  border-bottom: 1px solid var(--b2) !important;
-}
-
-#forums .forum_post td {
-  background: var(--bg2) !important;
-  color: var(--t1) !important;
-  border-top: none !important;
-  border-left: none !important;
-  border-right: none !important;
-  border-bottom: 1px solid var(--b0) !important;
-}
-
-#forums .forum_post .body {
-  line-height: 1.75;
-  color: var(--t1) !important;
-}
-
-#forums .forum_post .body blockquote {
-  background: var(--bg1);
-  border-left: 3px solid var(--ac);
-  border-radius: 0 5px 5px 0;
-  padding: 9px 13px;
-  margin: 8px 0;
-  color: var(--t2);
-  font-style: italic;
-}
-
-#forums .thin h2 { color: var(--t0) !important; font-size: 1.2rem; margin-bottom: 12px; }
-
-
-/* ─────────────────────────────────────────────────────────── */
-/*  GENERAL TABLE ROWS                                         */
-/* ─────────────────────────────────────────────────────────── */
-
-td {
-  border-top: none !important;
-  border-left: none !important;
-  border-right: none !important;
-  border-bottom: 1px solid var(--b0) !important;
-  color: var(--t1);
-}
-
-.torrent_table tr:hover td,
-.forum_index tbody tr:hover td,
-#latest5posts tr:hover td,
-.winnerTable > tbody > tr:hover > td:not(.tdhack) {
-  background: var(--ac-dim) !important;
-}
-
-.forum_index tbody tr:nth-child(even) td {
-  background: var(--bg1) !important;
-}
-
-.forum_index tbody td,
-.torrent_table td,
-#latest5posts td {
-  border-bottom: 1px solid var(--b1) !important;
-}
-
-div[data-load-report] table td { border-color: var(--b1) !important; }
-
-table#torrent_table strong,
-.tl_notice,
-.internal-mark {
-  color: var(--warn);
-  font-weight: 700;
-}
-
-table.ft_cat_list { background: var(--bg2); }
-
-
-/* ─────────────────────────────────────────────────────────── */
-/*  FORMS & INPUTS                                             */
-/* ─────────────────────────────────────────────────────────── */
-
-textarea,
-input[name="subject"],
-textarea[name="body"],
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="file"],
-input[type="search"],
-form.search_form input {
+/* Forms */
+textarea, input[type="text"], input[type="password"], input[type="email"], select {
   background: var(--bg1) !important;
   color: var(--t0) !important;
   border: 1px solid var(--b2) !important;
-  border-radius: 8px;
-  transition: border-color 0.15s, box-shadow 0.15s;
+  border-radius: 6px;
+  padding: 4px;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-textarea:focus {
-  border-color: var(--ac) !important;
-  outline: none;
-  box-shadow: 0 0 0 3px var(--ac-glow);
-}
-
-select {
-  background: var(--bg1);
-  color: var(--t1);
-  border: 1px solid var(--b2);
-  border-radius: 8px;
-}
-
-input[type="submit"],
-input[type="button"],
-.btn {
+input[type="submit"], input[type="button"], .btn {
   color: var(--t0) !important;
   background: var(--bg4) !important;
   border: 1px solid var(--b3) !important;
-  border-radius: 8px;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  transition: background 0.15s, border-color 0.15s;
+  padding: 5px 15px;
   cursor: pointer;
+  border-radius: 6px;
 }
 
-input[type="submit"]:hover,
-input[type="submit"]:focus,
-input[type="button"]:hover,
-input[type="button"]:focus,
-.btn:hover {
+input[type="submit"]:hover, .btn:hover {
   background: var(--bg5) !important;
   border-color: var(--ac) !important;
-  color: #fff !important;
 }
 
-a.huge-movie-list__movie__title,
-a.huge-movie-list__movie__director { color: var(--t0) !important; }
-
-div.submit.ft_submit { color: var(--t2); background: var(--bg2); }
-
-#newthreadtext #title {
-  background: var(--bg1) !important;
-  color: var(--t0) !important;
-}
-
-
-/* ─────────────────────────────────────────────────────────── */
-/*  BBCODE BAR                                                 */
-/* ─────────────────────────────────────────────────────────── */
-
-ul.bbcode_bar {
-  color: var(--t2);
-  background: var(--bg1);
-  border-bottom: 1px solid var(--b1);
-}
-
-.bbcode_bar .emoji_box,
-.bbcode_bar .size_box {
-  background: var(--bg1);
-  border: 1px solid var(--b2);
-  border-radius: 5px;
-}
-
-
-/* ─────────────────────────────────────────────────────────── */
-/*  TAGS / CHIPS                                               */
-/* ─────────────────────────────────────────────────────────── */
-
-#index .sidebar .stats.nobullet a,
-a.basic-movie-list__movie__tag,
-.huge-movie-list__movie__tag-list a,
-a.cover-movie-list__movie__tag,
-.movie-tooltip__tag,
-#taglist tr, #taglist tr td { display: inline; }
-
-#taglist tr td a,
-.tags a,
-.sidebar .stats.nobullet a {
-  display: inline-block;
-  background: var(--ac-dim) !important;
+/* Tags & Badges */
+.tags a, .sidebar .stats.nobullet a, #taglist tr td a {
+  background: var(--bg3) !important;
   color: var(--ac) !important;
-  border: 1px solid rgba(var(--ac-rgb), 0.35) !important;
-  border-radius: 999px;
-  padding: 1px 9px;
-  font-size: 0.81rem;
-  font-weight: 500;
-  transition: background 0.14s, border-color 0.14s;
+  padding: 2px 8px;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 2px;
 }
 
-#taglist tr td a:hover,
-.tags a:hover,
-.sidebar .stats.nobullet a:hover {
-  background: rgba(var(--ac-rgb), 0.22) !important;
-  border-color: var(--ac) !important;
-  color: #fff !important;
-}
+/* User Classes (Permissions) */
+.permission_1000 { color: #cd0010 !important; font-weight: bold; } /* SYSOP */
+.permission_800  { color: #026ad4 !important; font-weight: bold; } /* ADMIN */
+.permission_600  { color: #c46ebd !important; font-weight: bold; } /* MOD */
+.permission_100  { color: #FFF300 !important; } /* VIP */
 
-#taglist { text-align: center; background: var(--bg2); }
-
-
-/* ─────────────────────────────────────────────────────────── */
-/*  SVG / ICONS                                               */
-/* ─────────────────────────────────────────────────────────── */
-
+/* Icons & Special Marks */
 svg { fill: var(--t2) !important; }
+.token_ic { color: #ff7fff !important; }
+.download_ic { color: #90ee90 !important; }
+.up_polygon { fill: var(--ok); }
+.down_polygon { fill: var(--err); }
+.internal-mark, table#torrent_table strong { color: var(--warn) !important; }
 
-.show_torrents:before, .hide_torrents:before { color: var(--t1); }
-
-.cats_movies:before, .cats_tv:before, .cats_theater:before,
-.cats_games:before, .cats_software:before, .cats_porno:before,
-.cats_music:before, .cats_books:before, .cats_other:before,
-.cats_moviespacks:before { color: var(--t1); }
-
-span.other_categories:before { color: var(--t3); }
-
-.up_polygon   { fill: var(--ok)  !important; stroke: #1fa85a !important; stroke-width: 1; }
-.down_polygon { fill: var(--err) !important; stroke: #b03040 !important; stroke-width: 1; }
-
-.token_ic    { color: #e07ef5 !important; }
-.reseed_ic   { color: var(--warn) !important; }
-.download_ic { color: var(--ok)   !important; }
-.report_ic   { color: var(--err)  !important; }
-.bookmark_ic { color: #7ecef8    !important; }
-
-
-/* ─────────────────────────────────────────────────────────── */
-/*  MOVIE ITEMS                                                */
-/* ─────────────────────────────────────────────────────────── */
-
-div.movie-item {
-  background: var(--bg2);
-  border: 1px solid var(--b1);
-  border-radius: 9px;
-  transition: border-color 0.15s;
-}
-
-div.movie-item:hover { border-color: var(--b3); }
-div.movie-item-tags  { background: var(--bg1); }
-.tv_title_season     { text-decoration: underline; color: var(--t0); }
-
-
-/* ─────────────────────────────────────────────────────────── */
-/*  PAGINATION                                                 */
-/* ─────────────────────────────────────────────────────────── */
-
-.page-link, .next-prev { color: var(--t2) !important; }
-
-.next, .last, .prev, .first {
-  color: var(--t0) !important;
-  font-weight: 700 !important;
-  font-size: 12px;
-}
-
-.nolink { color: var(--t3); font-weight: 700; border: 0; }
-
-
-/* ─────────────────────────────────────────────────────────── */
-/*  MISC WIDGETS                                               */
-/* ─────────────────────────────────────────────────────────── */
-
-.poll .graph .center_poll {
-  background: var(--ac);
-  border-radius: 4px;
-}
-
-#threadpoll { background: var(--bg2) !important; }
-td.calendar-day-np { background: var(--bg3) !important; }
-
-.tab {
-  overflow: hidden;
-  border: 1px solid var(--b1);
-  background: var(--bg2);
-  border-radius: 9px 9px 0 0;
-}
-.tab button { color: var(--t2); transition: background 0.13s, color 0.13s; }
-.tab button:hover  { background: var(--bg3); color: var(--t1); }
-.tab button.active { background: var(--bg4); color: var(--ac); font-weight: 700; }
-
-.autocomplete-suggestion {
-  border-bottom: 1px solid var(--b1);
-  color: var(--t2);
-  background: var(--bg2);
-}
-.autocomplete-suggestion:hover {
-  background: var(--bg4) !important;
-  color: var(--t0);
-}
-
-.multi-select-menu {
-  background: var(--bg2);
-  border: 1px solid var(--b2);
-  border-radius: 9px;
-  box-shadow: 0 8px 28px rgba(0,0,0,0.4);
-}
-
-
-/* ─────────────────────────────────────────────────────────── */
-/*  STATUS BOXES                                               */
-/* ─────────────────────────────────────────────────────────── */
-
-.greenbox {
-  border: 1px solid rgba(68,217,138,0.4) !important;
-  background: rgba(20,80,50,0.5) !important;
-  color: #a0f0c0 !important;
-  border-radius: 5px;
-}
-
-.goldbox {
-  border: 1px solid rgba(245,197,66,0.4) !important;
-  background: rgba(90,60,10,0.55) !important;
-  color: #f5e090 !important;
-  border-radius: 5px;
-}
-.goldbox a       { color: #f5e090 !important; }
-.goldbox a:hover { color: var(--ac) !important; }
-
-.bluebox {
-  border: 1px solid rgba(100,170,240,0.35) !important;
-  background: rgba(10,40,80,0.55) !important;
-  color: #a0c8f0 !important;
-  border-radius: 5px;
-}
-
-.redbox {
-  border: 1px solid rgba(240,96,112,0.4) !important;
-  background: rgba(90,20,25,0.55) !important;
-  color: #f5b0b8 !important;
-  border-radius: 5px;
-}
-
-
-/* ─────────────────────────────────────────────────────────── */
-/*  USER CLASS COLOURS                                         */
-/* ─────────────────────────────────────────────────────────── */
-
-.user_details { color: var(--t0); }
-
-.permission_staff { font-weight:700; color:#4eb2f5 !important; }
-.permission_1000  { font-weight:700; color:#ff4455 !important; }
-.permission_900   { font-weight:700; color:#ff3060 !important; }
-.permission_800   { font-weight:700; color:#3d92f0 !important; }
-.permission_700   { font-weight:700; color:#e04820 !important; }
-.permission_600   { font-weight:700; color:#d07cd8 !important; }
-.permission_450   { font-weight:700; color:#60ccff !important; }
-.permission_400   {                  color:#ff22bb !important; }
-.permission_205   {                  color:#22d060 !important; }
-.permission_200   {                  color:#00ffaa !important; }
-.permission_150   { font-weight:700; color:#ffaa00 !important; }
-.permission_100   {                  color:#ffe040 !important; }
-.permission_17    {                  color:#66d8a0 !important; }
-.permission_16    {                  color:#cc9944 !important; }
-.permission_15    {                  color:#aadd20 !important; }
-.permission_14    {                  color:#77dd00 !important; }
-.permission_13    {                  color:#14b814 !important; }
-.permission_12    {                  color:#108810 !important; }
-.permission_11    { font-weight:700; color:#eef4f8 !important; }
-.permission_10    {                  color:#c4d8e0 !important; }
-
-
-/* ─────────────────────────────────────────────────────────── */
-/*  FOOTER                                                     */
-/* ─────────────────────────────────────────────────────────── */
-
-#footer {
-  padding-top: 1%;
-  border-top: 1px solid var(--b1);
-  color: var(--t3);
-}
-
-
-/* ─────────────────────────────────────────────────────────── */
-/*  SCROLLBAR                                                  */
-/* ─────────────────────────────────────────────────────────── */
-
-::-webkit-scrollbar              { width: 7px; height: 7px; }
-::-webkit-scrollbar-track        { background: var(--bg0); }
-::-webkit-scrollbar-thumb        { background: var(--bg4); border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover  { background: var(--bg5); }
-
-
-/* ─────────────────────────────────────────────────────────── */
-/*  DENSITY                                                    */
-/* ─────────────────────────────────────────────────────────── */
-
-#torrents .filter_torrents .layout td,
-#forums .forum_post td,
-.torrent_table td {
-  padding-top: 6px;
-  padding-bottom: 6px;
-}
+/* Misc */
+.alertbar { background: var(--bg1); border: 1px solid var(--warn); }
+#menu { background: var(--bg1) !important; border-bottom: 1px solid var(--b2); }
+#searchbars-wrapper { background: var(--bg1) !important; }
