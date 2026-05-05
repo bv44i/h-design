@@ -1,7 +1,9 @@
 /* ============================================================
-   GAZELLE MODERN INTEGRATED V7 - RESTORED NAVBAR SELECTORS
+   Gazelle Modern V2 — RTL STABILIZED MERGE
+   Full feature set with RTL structural support
    ============================================================ */
 
+/* ── PALETTE CONFIGURATION ── */
 :root, .palette-ocean {
   --bg0: #0c1318; --bg1: #131e26; --bg2: #192835; --bg3: #213344; --bg4: #2a4056; --bg5: #365068;
   --b0: rgba(140, 210, 230, 0.07); --b1: rgba(140, 210, 230, 0.15); --b2: rgba(140, 210, 230, 0.26); --b3: rgba(140, 210, 230, 0.44);
@@ -10,153 +12,173 @@
   --ok: #44d98a; --warn: #f5c542; --err: #f06070;
 }
 
-.palette-rose {
-  --bg0: #130f18; --bg1: #1e1428; --bg2: #271b35; --bg3: #322344; --bg4: #422e58; --bg5: #56396e;
-  --b0: rgba(220, 150, 210, 0.07); --b1: rgba(220, 150, 210, 0.15); --b2: rgba(220, 150, 210, 0.26); --b3: rgba(220, 150, 210, 0.45);
-  --t0: #f8eeff; --t1: #ddc8f0; --t2: #a878c0; --t3: #6a4888;
-  --ac: #e060c8; --ac-rgb: 224, 96, 200; --ac-dim: rgba(224, 96, 200, 0.13); --ac-glow: rgba(224, 96, 200, 0.22); --ac-text: #2a0820;
-}
-
-/* 1. RESET & RTL ENGINE */
-* { box-sizing: border-box !important; }
+/* 1. RTL STRUCTURE & RESET */
+*, *::before, *::after { box-sizing: border-box !important; }
 
 html, body {
   background-color: var(--bg0) !important;
   color: var(--t1) !important;
-  direction: rtl !important;
+  direction: rtl !important; /* Forces Right-To-Left */
   text-align: right;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  font-size: 13.5px;
+  line-height: 1.65;
   margin: 0; padding: 0;
-  font-family: sans-serif;
 }
 
-/* 2. HEADER & NAVBAR RESTORATION */
+#wrapper {
+  max-width: 1720px;
+  margin: 0 auto !important;
+}
+
+.thin {
+  width: 95%;
+  max-width: 1300px;
+  margin: 20px auto !important;
+  clear: both;
+}
+
+/* RTL Column Floats */
+.main_column {
+  float: right !important;
+  width: 74% !important;
+}
+
+.sidebar {
+  float: left !important;
+  width: 24% !important;
+}
+
+.thin:after { content: ""; display: table; clear: both; }
+
+/* 2. NAVIGATION & TOP SECTION (Restored Design) */
 #header {
-  background-color: var(--bg1);
+  background: var(--bg1) !important;
   border-bottom: 2px solid var(--ac);
-  padding: 0;
-  width: 100%;
 }
 
-/* User Info Bar (Stats, Logout, etc) */
+#menu {
+  background: var(--bg1) !important;
+  border-bottom: 1px solid var(--b2);
+  text-align: center;
+  padding: 10px 0;
+}
+
+#menu ul { list-style: none; padding: 0; margin: 0; display: inline-flex; gap: 10px; }
+
+#header > #menu ul > li > a {
+  color: var(--t1) !important;
+  border-radius: 5px;
+  padding: 6px 12px;
+  font-weight: 600;
+  transition: background 0.15s, color 0.15s;
+}
+
+#header > #menu ul > li > a:hover,
+#header > #menu ul > li.active > a {
+  background: var(--ac-dim) !important;
+  color: var(--ac) !important;
+}
+
 #userinfo {
   background: var(--bg2);
   border-bottom: 1px solid var(--b1);
-  margin: 0;
   padding: 8px 20px;
-  list-style: none;
-  display: block; /* Restored from Flex to allow standard Gazelle wrapping */
-  text-align: right;
+  display: block;
 }
 
 #userinfo li {
   display: inline-block;
-  margin-left: 12px;
-  font-size: 11px;
+  margin-left: 15px; /* Spacing for RTL */
+  font-size: 12px;
+  color: var(--t2);
 }
 
-#userinfo a { font-weight: bold; color: var(--t1); }
-#userinfo a:hover { color: var(--ac); }
-
-/* Main Menu (Torrents, Forums, etc) */
-#menu {
-  background: var(--bg1);
-  padding: 12px 0;
-  text-align: center;
-}
-
-#menu ul {
-  list-style: none;
-  margin: 0; padding: 0;
-}
-
-#menu li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-#menu li a {
-  font-size: 14px;
-  font-weight: bold;
-  color: var(--t0) !important;
-  padding: 5px 8px;
-}
-
-#menu li a:hover {
-  background: var(--b1);
-  border-radius: 4px;
-}
-
-/* Search Bars Fix */
-#searchbars {
-  background: var(--bg0);
-  padding: 8px;
+#searchbars-wrapper {
+  background: var(--bg1) !important;
   border-top: 1px solid var(--b1);
-  text-align: center;
+  padding: 8px 0;
 }
 
-#searchbars ul { list-style: none; padding: 0; margin: 0; display: inline-flex; gap: 10px; }
-
-#searchbars input {
-  background: var(--bg2) !important;
-  border: 1px solid var(--b2) !important;
-  color: var(--t0) !important;
-  padding: 4px 10px;
-  border-radius: 4px;
-}
-
-/* 3. LAYOUT */
-.thin { width: 95%; max-width: 1300px; margin: 20px auto !important; }
-.main_column { float: right !important; width: 74% !important; }
-.sidebar { float: left !important; width: 24% !important; }
-.thin:after { content: ""; display: table; clear: both; }
-
-/* 4. CONTENT BLOCKS */
-.box, .panel__body, .sidebar .box {
+/* 3. PANELS / BOXES (Restored Design) */
+.panel__body, .sidebar .box, .news_post .pad, .main_column .box, #inbox .box {
   background: var(--bg2) !important;
   border: 1px solid var(--b1) !important;
+  border-radius: 13px !important;
+  box-shadow: 0 3px 16px rgba(0,0,0,0.35) !important;
   margin-bottom: 20px;
-  padding: 12px;
-  border-radius: 8px;
+  overflow: hidden;
 }
 
 .head, .colhead, .colhead_dark, tr.colhead, thead th {
   background: var(--bg4) !important;
   color: var(--t0) !important;
+  border-bottom: 1px solid var(--b2) !important;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   padding: 10px 15px !important;
-  border-bottom: 2px solid var(--bg0) !important;
 }
 
-td { background: var(--bg2) !important; border-bottom: 1px solid var(--b0) !important; padding: 8px !important; }
+/* 4. TABLES & CONTENT */
+td {
+  background: var(--bg2) !important;
+  border-bottom: 1px solid var(--b0) !important;
+  padding: 8px 12px !important;
+  color: var(--t1);
+}
 
-/* 5. FORMS & BUTTONS */
-:root body input, :root body textarea, :root body select {
-  background-color: var(--bg1) !important;
+tr.group td { background: var(--bg1) !important; }
+tr:hover td { background: var(--ac-dim) !important; }
+
+/* 5. TYPOGRAPHY & LINKS */
+a { color: var(--t0) !important; transition: 0.14s; }
+a:hover { color: var(--ac) !important; }
+
+h2, h3 { color: var(--t0) !important; font-weight: 700; margin-bottom: 10px; }
+
+/* 6. FORMS (Restored Designs) */
+input[type="text"], input[type="search"], textarea, select {
+  background: var(--bg1) !important;
   color: var(--t0) !important;
   border: 1px solid var(--b2) !important;
-  padding: 6px !important;
+  border-radius: 8px;
+  padding: 6px 12px !important;
 }
 
-:root body input[type="submit"], :root body input[type="button"], :root body button {
-  background-color: var(--bg4) !important;
+input:focus { border-color: var(--ac) !important; outline: none; box-shadow: 0 0 0 3px var(--ac-glow); }
+
+input[type="submit"], input[type="button"], .btn {
+  background: var(--bg4) !important;
   color: var(--t0) !important;
   border: 1px solid var(--b3) !important;
+  border-radius: 8px;
+  padding: 6px 15px;
+  font-weight: 600;
   cursor: pointer;
 }
 
-/* 6. PERMISSIONS & STATS */
-.permission_1000 { color: #ff4d4d !important; font-weight: bold; }
-.permission_800  { color: #3399ff !important; font-weight: bold; }
-.r00 { color: var(--err) !important; }
-.r10 { color: var(--ok) !important; }
+input[type="submit"]:hover { background: var(--bg5) !important; border-color: var(--ac) !important; }
 
-/* 7. BBCODE RTL FIX */
-blockquote { 
-  background: var(--bg1) !important; 
-  border-right: 4px solid var(--ac) !important; 
-  border-left: none !important; 
-  padding: 10px; margin: 10px 0; 
+/* 7. BBCODE (RTL Fix) */
+blockquote {
+  background: var(--bg1);
+  border-right: 3px solid var(--ac); /* Right border for RTL */
+  border-left: none;
+  padding: 10px 15px;
+  margin: 10px 0;
+  font-style: italic;
+  color: var(--t2);
 }
 
-/* 8. LOGO & MISC */
-#logo { margin: 20px 0; text-align: center; }
-#totop { filter: invert(1); }
+/* 8. USER CLASSES (Sysop/Admin/etc) */
+.permission_1000 { color: #ff4455 !important; font-weight: 700; }
+.permission_800  { color: #3d92f0 !important; font-weight: 700; }
+.upload_stat { color: var(--ok) !important; font-weight: 700; }
+.download_stat { color: var(--err) !important; font-weight: 700; }
+
+/* 9. SCROLLBAR */
+::-webkit-scrollbar { width: 7px; }
+::-webkit-scrollbar-track { background: var(--bg0); }
+::-webkit-scrollbar-thumb { background: var(--bg4); border-radius: 4px; }
