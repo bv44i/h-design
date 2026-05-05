@@ -1,5 +1,5 @@
 /* ============================================================
-   GAZELLE MODERN INTEGRATED V4 - FULL RTL STABILIZED
+   GAZELLE MODERN INTEGRATED V6 - FULL FEATURE + RTL STABLE
    ============================================================ */
 
 :root, .palette-ocean {
@@ -10,171 +10,136 @@
   --ok: #44d98a; --warn: #f5c542; --err: #f06070;
 }
 
-/* 1. RTL & BASE RESET */
+.palette-rose {
+  --bg0: #130f18; --bg1: #1e1428; --bg2: #271b35; --bg3: #322344; --bg4: #422e58; --bg5: #56396e;
+  --b0: rgba(220, 150, 210, 0.07); --b1: rgba(220, 150, 210, 0.15); --b2: rgba(220, 150, 210, 0.26); --b3: rgba(220, 150, 210, 0.45);
+  --t0: #f8eeff; --t1: #ddc8f0; --t2: #a878c0; --t3: #6a4888;
+  --ac: #e060c8; --ac-rgb: 224, 96, 200; --ac-dim: rgba(224, 96, 200, 0.13); --ac-glow: rgba(224, 96, 200, 0.22); --ac-text: #2a0820;
+}
+
+.palette-amber {
+  --bg0: #130e08; --bg1: #1f1610; --bg2: #291e14; --bg3: #352719; --bg4: #473422; --bg5: #5c4430;
+  --b0: rgba(230, 180, 100, 0.07); --b1: rgba(230, 180, 100, 0.15); --b2: rgba(230, 180, 100, 0.26); --b3: rgba(230, 180, 100, 0.45);
+  --t0: #fdf4e8; --t1: #e8d4b0; --t2: #b89060; --t3: #7a5c38;
+  --ac: #f5a030; --ac-rgb: 245, 160, 48; --ac-dim: rgba(245, 160, 48, 0.13); --ac-glow: rgba(245, 160, 48, 0.22); --ac-text: #2a1400;
+}
+
+/* 1. RESET & RTL ENGINE */
+* { box-sizing: border-box !important; }
+
 html, body {
   background-color: var(--bg0) !important;
-  color: var(--t1);
-  direction: rtl !important; /* Force RTL site-wide */
+  color: var(--t1) !important;
+  direction: rtl !important;
   text-align: right;
   margin: 0;
   padding: 0;
+  font-family: sans-serif;
+  line-height: 1.6;
 }
 
-*, *:before, *:after { 
-  box-sizing: border-box !important; 
-}
-
-/* 2. THE TOP / HEADER FIXES */
+/* 2. THE TOP BAR (HEADER RECONSTRUCTION) */
 #header {
+  position: relative;
+  background-color: var(--bg1);
   width: 100%;
-  background: var(--bg1);
   border-bottom: 2px solid var(--ac);
-  padding: 10px 0;
-  margin-bottom: 20px;
+  padding-top: 45px; /* Adjust if user bar overlaps */
 }
 
-/* User Info Bar (Top Right in RTL) */
 #userinfo {
-  display: flex;
-  justify-content: flex-start; /* Aligns to right in RTL */
-  padding: 5px 20px;
+  position: absolute;
+  top: 0; right: 0; left: 0;
+  height: 40px;
+  background: var(--bg2);
+  display: flex !important;
+  align-items: center;
+  justify-content: flex-start; /* Aligns items to the right in RTL */
+  padding: 0 20px;
+  margin: 0;
   list-style: none;
+  border-bottom: 1px solid var(--b1);
 }
 
-#userinfo li {
-  margin-left: 15px; /* Spacing for RTL */
-  margin-right: 0;
-}
+#userinfo li { margin-left: 15px; display: inline-block; font-size: 11px; font-weight: bold; }
 
-/* Main Navigation Menu */
-#menu {
-  background: var(--bg2) !important;
-  padding: 10px;
-}
+#menu { width: 100%; text-align: center; padding: 10px 0; }
+#menu ul { padding: 0; margin: 0; list-style: none; display: flex; justify-content: center; gap: 20px; }
+#menu ul li a { font-size: 14px; color: var(--t0); font-weight: bold; }
 
-#menu ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-}
+#searchbars { background: var(--bg1); padding: 10px; display: flex; justify-content: center; gap: 10px; }
+#searchbars input { background: var(--bg2) !important; border: 1px solid var(--b2) !important; color: var(--t0) !important; padding: 4px 8px; border-radius: 4px; }
 
-#menu ul li {
-  margin: 0 10px;
-}
+/* 3. LAYOUT (RTL CORRECTED) */
+.thin { width: 95%; max-width: 1300px; margin: 20px auto !important; }
 
-/* Search Bars */
-#searchbars {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  padding: 10px;
-  background: var(--bg1);
-}
+.main_column { float: right !important; width: 74% !important; }
+.sidebar { float: left !important; width: 24% !important; }
 
-/* 3. MAIN LAYOUT (RTL FLOATS) */
-.thin {
-  max-width: 1200px;
-  margin: 0 auto !important;
-  clear: both;
-}
+.thin:after { content: ""; display: table; clear: both; }
 
-.main_column {
-  float: right !important; /* Floats right for RTL */
-  width: 74% !important;
-  padding-left: 15px; /* Gap between main and sidebar */
-}
-
-.sidebar {
-  float: left !important; /* Floats left for RTL */
-  width: 24% !important;
-}
-
-/* Clearfix for the container */
-.thin:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* 4. TABLES & BOXES */
-.box, .panel__body {
+/* 4. BOXES & TABLES */
+.box, .panel__body, .sidebar .box, .news_post .pad {
   background: var(--bg2) !important;
   border: 1px solid var(--b1) !important;
-  margin-bottom: 15px;
-  border-radius: 4px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 12px;
 }
 
-.head, .colhead, .colhead_dark, thead th {
+.head, .colhead, .colhead_dark, tr.colhead, thead th {
   background: var(--bg4) !important;
   color: var(--t0) !important;
-  text-align: right; /* Ensure text is right-aligned */
-  padding: 8px 12px !important;
+  padding: 10px 15px !important;
+  border-bottom: 2px solid var(--bg0) !important;
+  text-transform: uppercase;
+  font-size: 12px;
 }
 
-td {
-  background: var(--bg2) !important;
-  border-bottom: 1px solid var(--b0) !important;
-  text-align: right;
-}
+td { background: var(--bg2) !important; border-bottom: 1px solid var(--b0) !important; padding: 8px !important; }
+tr.group td { background: var(--bg1) !important; }
 
-/* 5. OVERRIDE WHITE INPUTS / BUTTONS (RTL SENSITIVE) */
-:root body input[type="text"], 
-:root body input[type="search"], 
-:root body textarea, 
-:root body select {
+/* 5. FORM OVERRIDES (High Specificity) */
+:root body input, :root body textarea, :root body select {
   background-color: var(--bg1) !important;
   color: var(--t0) !important;
   border: 1px solid var(--b2) !important;
-  padding: 6px 10px !important;
-  direction: rtl !important;
-  text-align: right;
+  padding: 8px !important;
+  border-radius: 4px;
 }
 
-:root body button, 
-:root body input[type="submit"], 
-:root body input[type="button"] {
-  background: var(--bg4) !important;
+:root body input[type="submit"], :root body input[type="button"], :root body button {
+  background-color: var(--bg4) !important;
   color: var(--t0) !important;
   border: 1px solid var(--b3) !important;
   cursor: pointer;
-  padding: 6px 15px !important;
-}
-
-/* 6. LOGO & ALERTS */
-#logo {
-  text-align: center;
-  margin: 10px 0;
-}
-
-#logo a {
-  background-image: url('images/logo.png'); /* Replace with your logo */
-  display: inline-block;
-  height: 80px;
-  width: 250px;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.alertbar {
-  background: var(--bg3);
-  color: var(--warn);
-  padding: 10px;
-  text-align: center;
   font-weight: bold;
-  border: 1px solid var(--warn);
 }
 
-/* 7. SMALL SCREEN RESPONSIVENESS */
+/* 6. USER CLASS & PERMISSION COLORS */
+.permission_1000 { color: #ff4d4d !important; font-weight: bold; } /* SYSOP */
+.permission_800  { color: #3399ff !important; font-weight: bold; } /* ADMIN */
+.permission_600  { color: #d68fcc !important; font-weight: bold; } /* MOD */
+.permission_100  { color: #FFF300 !important; } /* VIP */
+
+/* Ratio Colors */
+.r00 { color: var(--err) !important; }
+.r10 { color: var(--ok) !important; }
+.upload_stat { color: var(--ok) !important; }
+.down_stat { color: var(--err) !important; }
+
+/* 7. BBCODE & ICONS */
+blockquote { background: var(--bg1) !important; border-right: 4px solid var(--ac) !important; border-left: none !important; padding: 10px; margin: 10px 0; }
+.tags a { background: var(--bg3) !important; color: var(--ac) !important; padding: 2px 8px; border-radius: 10px; font-size: 11px; margin: 2px; display: inline-block; }
+
+.token_ic { color: #ff7fff !important; }
+.download_ic { color: #90ee90 !important; }
+.internal-mark { color: var(--warn) !important; }
+
+/* 8. MISC FIXES */
+#logo { margin: 20px 0; text-align: center; }
+#totop { filter: invert(1); }
+
 @media (max-width: 900px) {
-  .main_column, .sidebar {
-    width: 100% !important;
-    float: none !important;
-    padding: 0 !important;
-  }
-  
-  #userinfo, #menu ul {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+  .main_column, .sidebar { width: 100% !important; float: none !important; }
 }
