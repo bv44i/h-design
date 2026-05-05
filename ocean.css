@@ -1,5 +1,5 @@
 /* ============================================================
-   GAZELLE MODERN INTEGRATED V3 - FULL STABILIZED VERSION
+   GAZELLE MODERN INTEGRATED V4 - FULL RTL STABILIZED
    ============================================================ */
 
 :root, .palette-ocean {
@@ -10,87 +10,125 @@
   --ok: #44d98a; --warn: #f5c542; --err: #f06070;
 }
 
-/* 1. LAYOUT STABILIZER (Prevents "Broken" Site) */
-*, *:before, *:after { 
-  box-sizing: border-box !important; 
-}
-
+/* 1. RTL & BASE RESET */
 html, body {
   background-color: var(--bg0) !important;
   color: var(--t1);
+  direction: rtl !important; /* Force RTL site-wide */
+  text-align: right;
   margin: 0;
   padding: 0;
 }
 
+*, *:before, *:after { 
+  box-sizing: border-box !important; 
+}
+
+/* 2. THE TOP / HEADER FIXES */
+#header {
+  width: 100%;
+  background: var(--bg1);
+  border-bottom: 2px solid var(--ac);
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+/* User Info Bar (Top Right in RTL) */
+#userinfo {
+  display: flex;
+  justify-content: flex-start; /* Aligns to right in RTL */
+  padding: 5px 20px;
+  list-style: none;
+}
+
+#userinfo li {
+  margin-left: 15px; /* Spacing for RTL */
+  margin-right: 0;
+}
+
+/* Main Navigation Menu */
+#menu {
+  background: var(--bg2) !important;
+  padding: 10px;
+}
+
+#menu ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+#menu ul li {
+  margin: 0 10px;
+}
+
+/* Search Bars */
+#searchbars {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  background: var(--bg1);
+}
+
+/* 3. MAIN LAYOUT (RTL FLOATS) */
 .thin {
   max-width: 1200px;
   margin: 0 auto !important;
-  display: block;
+  clear: both;
 }
 
-/* Clearfix for float-based layouts */
-.thin:after, .main_column:after, .sidebar:after, .box:after, .colhead:after {
-  content: ""; display: table; clear: both;
+.main_column {
+  float: right !important; /* Floats right for RTL */
+  width: 74% !important;
+  padding-left: 15px; /* Gap between main and sidebar */
 }
 
-/* 2. CORE TYPOGRAPHY & LINKS */
-body, .tdhack, td, th, p, div {
-  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
-  font-size: 13px;
-  line-height: 1.6;
+.sidebar {
+  float: left !important; /* Floats left for RTL */
+  width: 24% !important;
 }
 
-a { 
-  color: var(--t0) !important; 
-  text-decoration: none !important; 
-  transition: 0.1s ease-in-out; 
+/* Clearfix for the container */
+.thin:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-a:hover { color: var(--ac) !important; }
-
-h1, h2, h3, h4, .head {
-  color: var(--t0) !important;
-  margin-top: 0;
-}
-
-/* 3. TABLE & BOX RECONSTRUCTION */
-.box, .panel__body, .sidebar .box, .main_column .box {
+/* 4. TABLES & BOXES */
+.box, .panel__body {
   background: var(--bg2) !important;
   border: 1px solid var(--b1) !important;
-  border-radius: 8px;
   margin-bottom: 15px;
-  overflow: hidden; /* Fixes internal bleeding of colors */
+  border-radius: 4px;
 }
 
 .head, .colhead, .colhead_dark, thead th {
   background: var(--bg4) !important;
   color: var(--t0) !important;
+  text-align: right; /* Ensure text is right-aligned */
   padding: 8px 12px !important;
-  font-weight: 600;
-  border-bottom: 2px solid var(--bg0) !important;
 }
 
 td {
   background: var(--bg2) !important;
   border-bottom: 1px solid var(--b0) !important;
-  padding: 8px !important;
+  text-align: right;
 }
 
-tr.group td { background: var(--bg1) !important; }
-
-/* 4. OVERRIDING GLOBAL.CSS COLLISION (FORMS) */
-/* We use ':root body' to ensure higher specificity than global.css */
+/* 5. OVERRIDE WHITE INPUTS / BUTTONS (RTL SENSITIVE) */
 :root body input[type="text"], 
-:root body input[type="password"], 
 :root body input[type="search"], 
 :root body textarea, 
 :root body select {
   background-color: var(--bg1) !important;
   color: var(--t0) !important;
   border: 1px solid var(--b2) !important;
-  border-radius: 4px;
   padding: 6px 10px !important;
-  outline: none !important;
+  direction: rtl !important;
+  text-align: right;
 }
 
 :root body button, 
@@ -99,78 +137,44 @@ tr.group td { background: var(--bg1) !important; }
   background: var(--bg4) !important;
   color: var(--t0) !important;
   border: 1px solid var(--b3) !important;
-  border-radius: 4px;
+  cursor: pointer;
   padding: 6px 15px !important;
-  text-transform: uppercase;
-  font-size: 11px;
+}
+
+/* 6. LOGO & ALERTS */
+#logo {
+  text-align: center;
+  margin: 10px 0;
+}
+
+#logo a {
+  background-image: url('images/logo.png'); /* Replace with your logo */
+  display: inline-block;
+  height: 80px;
+  width: 250px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.alertbar {
+  background: var(--bg3);
+  color: var(--warn);
+  padding: 10px;
+  text-align: center;
   font-weight: bold;
+  border: 1px solid var(--warn);
 }
 
-:root body button:hover, 
-:root body input[type="submit"]:hover {
-  background: var(--bg5) !important;
-  border-color: var(--ac) !important;
-}
-
-/* 5. SIDEBAR & MAIN COLUMN STABILIZATION */
-.sidebar {
-  float: right !important;
-  width: 24% !important;
-}
-
-.main_column {
-  float: left !important;
-  width: 74% !important;
-}
-
-/* Fix for mobile/small screens so it doesn't break */
-@media (max-width: 768px) {
-  .sidebar, .main_column {
+/* 7. SMALL SCREEN RESPONSIVENESS */
+@media (max-width: 900px) {
+  .main_column, .sidebar {
     width: 100% !important;
     float: none !important;
+    padding: 0 !important;
   }
-}
-
-/* 6. RATIO & USER CLASS COLORS (Fixing Visibility) */
-.r00 { color: var(--err) !important; }
-.r10 { color: var(--ok) !important; }
-
-/* Permission Colors */
-.permission_1000 { color: #ff4d4d !important; font-weight: bold; }
-.permission_800  { color: #3399ff !important; font-weight: bold; }
-.permission_600  { color: #d68fcc !important; font-weight: bold; }
-
-/* 7. BBCODE & POSTS */
-blockquote {
-  background: var(--bg1) !important;
-  border-left: 3px solid var(--ac) !important;
-  margin: 10px;
-  padding: 10px;
-  color: var(--t2) !important;
-}
-
-.code_block, pre {
-  background: #000 !important;
-  color: #99ff99 !important;
-  padding: 10px;
-  border-radius: 4px;
-  border: 1px solid var(--b2);
-}
-
-/* 8. MISC FIXES */
-#menu, #searchbars-wrapper {
-  background: var(--bg1) !important;
-  border-bottom: 1px solid var(--b1);
-}
-
-.tags a {
-  background: var(--b1) !important;
-  color: var(--ac) !important;
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-size: 11px;
-}
-
-#totop {
-  filter: invert(1); /* Makes the 'to top' arrow visible on dark */
+  
+  #userinfo, #menu ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
