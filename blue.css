@@ -1,44 +1,162 @@
 @import url("./common.css");
 
 :root {
+  /* ===== BACKGROUNDS ===== */
   --hb-bg: #0b1020;
-  --hb-bg-soft: #0c1224; /* slightly more consistent depth */
+  --hb-bg-soft: #0f172a;
 
+  /* Panels / Surfaces */
   --hb-panel: #111827;
-  --hb-panel-2: #162033; /* harmonized blue tint */
-  --hb-panel-3: #1b263a; /* smoother step between panels */
-  --hb-panel-hover: #222f44;
+  --hb-panel-2: #172033;
+  --hb-panel-3: #1e293b;
+  --hb-panel-hover: #273449;
 
-  --hb-border: #2f3f57; /* softer + more modern */
-  --hb-border-soft: #243249;
+  /* Borders */
+  --hb-border: #334155;
+  --hb-border-soft: #253044;
 
+  /* ===== TEXT ===== */
   --hb-text: #dbeafe;
   --hb-text-strong: #f8fafc;
-  --hb-muted: #93a4bb; /* slightly more balanced contrast */
+  --hb-muted: #94a3b8;
 
-  --hb-link: #5fa8ff; /* slightly cleaner blue */
-  --hb-link-hover: #86c2ff;
+  /* ===== LINKS ===== */
+  --hb-link: #60a5fa;
+  --hb-link-hover: #93c5fd;
 
+  /* ===== ACCENT ===== */
   --hb-accent: #2563eb;
-  --hb-accent-hover: #4f8cff;
-  --hb-accent-soft: rgba(37, 99, 235, 0.20);
-  --hb-accent-border: rgba(96, 165, 250, 0.45);
+  --hb-accent-hover: #60a5fa;
+  --hb-accent-soft: rgba(37, 99, 235, 0.24);
+  --hb-accent-border: rgba(96, 165, 250, 0.55);
 
+  /* ===== BUTTONS ===== */
   --hb-button-primary-bg: #2563eb;
   --hb-button-primary-bg-hover: #3b82f6;
-  --hb-button-primary-border: rgba(96, 165, 250, 0.55);
+  --hb-button-primary-border: rgba(96, 165, 250, 0.65);
   --hb-button-primary-text: #ffffff;
 
+  /* ===== INPUTS / FORMS (NEW - IMPORTANT) ===== */
+  --hb-input-bg: #0f172a;
+  --hb-input-border: #334155;
+  --hb-input-border-focus: #60a5fa;
+  --hb-input-text: #dbeafe;
+  --hb-input-placeholder: #64748b;
+
+  /* ===== FOCUS ===== */
   --hb-focus-border: #60a5fa;
-  --hb-focus-shadow: rgba(37, 99, 235, 0.22);
+  --hb-focus-shadow: rgba(37, 99, 235, 0.28);
 
-  --hb-pill-hover-bg: rgba(37, 99, 235, 0.18);
+  /* ===== PILLS / TAGS ===== */
+  --hb-pill-hover-bg: rgba(37, 99, 235, 0.22);
   --hb-pill-hover-text: #93c5fd;
-  --hb-pill-hover-border: rgba(96, 165, 250, 0.45);
+  --hb-pill-hover-border: rgba(96, 165, 250, 0.55);
 
+  /* ===== NAV ===== */
   --hb-nav-active-color: #93c5fd;
   --hb-nav-active-border: #60a5fa;
 
-  --hb-selection-bg: rgba(37, 99, 235, 0.32);
+  /* ===== SELECTION ===== */
+  --hb-selection-bg: rgba(37, 99, 235, 0.38);
   --hb-selection-text: #ffffff;
+
+  /* ===== HOVER SURFACES (NEW - makes UI feel modern) ===== */
+  --hb-hover-bg: rgba(255, 255, 255, 0.04);
+  --hb-hover-bg-strong: rgba(255, 255, 255, 0.07);
+
+  /* ===== SHADOW (NEW - depth) ===== */
+  --hb-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --hb-shadow-md: 0 6px 20px rgba(0, 0, 0, 0.45);
+
+  /* ===== SCROLLBAR (NEW - often forgotten) ===== */
+  --hb-scrollbar-bg: #0f172a;
+  --hb-scrollbar-thumb: #334155;
+  --hb-scrollbar-thumb-hover: #475569;
+}
+
+/* ===== GLOBAL BASE APPLICATION ===== */
+
+body {
+  background: var(--hb-bg);
+  color: var(--hb-text);
+}
+
+a {
+  color: var(--hb-link);
+}
+
+a:hover {
+  color: var(--hb-link-hover);
+}
+
+/* Panels */
+.panel,
+.box,
+.card {
+  background: var(--hb-panel);
+  border: 1px solid var(--hb-border);
+}
+
+/* Hoverable elements */
+.panel:hover,
+.box:hover,
+.card:hover {
+  background: var(--hb-panel-hover);
+}
+
+/* Inputs */
+input,
+textarea,
+select {
+  background: var(--hb-input-bg);
+  color: var(--hb-input-text);
+  border: 1px solid var(--hb-input-border);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--hb-input-placeholder);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--hb-input-border-focus);
+  outline: none;
+  box-shadow: 0 0 0 3px var(--hb-focus-shadow);
+}
+
+/* Buttons */
+button {
+  background: var(--hb-button-primary-bg);
+  color: var(--hb-button-primary-text);
+  border: 1px solid var(--hb-button-primary-border);
+}
+
+button:hover {
+  background: var(--hb-button-primary-bg-hover);
+}
+
+/* Text selection */
+::selection {
+  background: var(--hb-selection-bg);
+  color: var(--hb-selection-text);
+}
+
+/* Scrollbar (WebKit) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--hb-scrollbar-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--hb-scrollbar-thumb);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--hb-scrollbar-thumb-hover);
 }
