@@ -1,3 +1,1437 @@
+.box h3 {
+  font-size: 140%;
+}
+.box h4 {
+  font-size: 130%;
+}
+.box h5 {
+  font-size: 120%;
+}
+.box h6 {
+  font-size: 110%;
+}
+
+.thin {
+  box-sizing: border-box;
+}
+
+.flex_input_container {
+  display: flex;
+}
+.flex_input_container > input[type=text]{
+  flex-grow: 1;
+  box-sizing: border-box;
+  width: 50%;
+}
+
+.body, .profileinfo {
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+input, textarea {
+  border: 1px solid #c7c7c7;
+  background-color: white;
+  padding: 10px 9px;
+  color: black;
+  outline: none;
+}
+
+select {
+  padding: 5px 10px;
+  background-color: white;
+  border: 1px solid #c7c7c7;
+  color: black;
+  border-radius: 0px;
+  outline: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+h2 .group_cat {
+  height: 16px;
+  width: 16px;
+  margin: 0 13px;
+  display: inline-block;
+  background-size: 16px 16px;
+}
+
+a.other_categories {
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+span.other_categories {
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+div.box_other_categories {
+  text-align: center;
+}
+
+code {
+  white-space: pre-line;
+}
+
+pre > br, code > br {
+  line-height: 0px;
+  display: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.collage_images {
+  padding: 0px;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0;
+}
+
+.collage_images {
+  display: block;
+}
+
+ul.collage_images li {
+  border: none;
+  float: left;
+  margin: 0;
+/*  width: 118px;
+  height: 118px;
+  width: 146px; */
+  width: 146px;
+  list-style: none;
+  list-style-type: none;
+}
+
+ul.collage_images li a {
+  display: block;
+/*  height: 118px; */
+  width: 100%;
+  overflow: hidden;
+}
+
+div.collage_image {
+  width: 20%;
+}
+
+[data-toggle-target], [data-quote-jump] {
+  cursor: pointer;
+}
+
+button, input[type=button], input[type=submit] {
+  cursor: pointer;
+  background: #fff;
+  font-size: 11px;
+  padding: 10px 9px;
+  border: none;
+  color: #000;
+}
+
+.spoilerButton {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.selected a {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.collage td {
+  padding: 0px;
+  border: none;
+}
+
+abbr[title] {
+  text-decoration: none;
+}
+
+.line_new {
+  color: green;
+}
+
+.line_deleted {
+  color: red;
+}
+
+.line_moved {
+  color: blue;
+}
+
+.log2 {
+  color: yellow;
+}
+
+.log3 {
+  color: #0E88C6;
+}
+
+.log4 {
+   font-weight: bold;
+}
+
+.log5 {
+   text-decoration: underline;
+}
+
+.good {
+  font-weight: bold;
+  color: green;
+}
+
+.bad {
+  font-weight: bold;
+  color: red;
+}
+
+.goodish {
+  font-weight: bold;
+  color: #35BF00;
+}
+
+.badish {
+  font-weight: bold;
+  color: #E5B244;
+}
+
+pre {
+  overflow: auto;
+}
+
+.disable_grouping {
+  display: none;
+}
+
+form textarea, form input {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+a.beta {
+  font-weight: bold;
+  color: #ff0000;
+}
+
+strong.important_text {
+  color: red;
+  font-weight: bold;
+}
+
+strong.important_text_alt {
+  color: green;
+  font-weight: bold;
+}
+
+.invalid, .warning, .error, .new {
+  color: #ff0000;
+}
+
+/* Make [+] on add multiple artists stay at the bottom (on torrent details page) */
+div#AddArtists {
+  position: relative;
+  display: inline-block;
+}
+
+div#AddArtists a {
+  position: absolute;
+  right: 0pt;
+  bottom: 0pt;
+}
+
+.clear:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.new-subscriptions {
+  font-weight: bold;
+}
+
+#forums #quickpost {
+  width: 95%;
+}
+
+.bbcode_bar {
+  list-style: none;
+  margin: 0px 0px -4px;
+  box-sizing: border-box;
+  display: inline-flex;
+}
+.bbcode_bar > li {
+  display: inline-block;
+  margin: 0px;
+}
+.bbcode_bar > li > a {
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  cursor: pointer;
+  min-width: 20px;
+  margin: 0px 4px;
+}
+
+.bbcode_bar .size_box {
+  position: absolute;
+  width: auto;
+  height: 100px;
+  overflow-y: scroll;
+  padding: 5px;
+}
+
+.bbcode_bar .emoji_box {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  overflow-y: scroll;
+  padding: 8px;
+  font-size: 20px;
+}
+
+.bbcode_bar .emoji_box > a {
+  cursor: pointer;
+}
+
+.bbcode_bar .emoji_box > br {
+  content: "";
+  display: block;
+  margin-bottom: 15px;
+}
+
+td.label, .valign_top {
+  vertical-align: top;
+}
+
+td.sublabel {
+  padding-right: 20px;
+}
+
+td.section_header {
+  font-weight: bold;
+  padding: 6px 8px;
+  background: rgba(128, 128, 128, 0.1);
+  border-top: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+span.rbt {
+  display: block;
+  padding: 8px 0 0;
+  background: url('../rippy/rippy_top.gif') no-repeat top;
+}
+
+span.rbm {
+  display: block;
+  background: url('../rippy/rippy_middle.gif') repeat bottom;
+  padding: 0 5px;
+}
+
+span.rbb {
+  display: block;
+  padding: 4px 0px 18px;
+  margin-bottom: 5px;
+  background: url('../rippy/rippy_bottom.gif') no-repeat bottom;
+}
+
+span.secondary_class {
+  font-size: 85%;
+  font-weight: bold;
+}
+
+.breadcrumbs {
+  font-weight: bold;
+  text-align: right;
+}
+
+.paranoia_override {
+  font-style: italic;
+}
+
+#manage_collage_table.ui-sortable .drag {
+  cursor: n-resize;
+}
+
+#manage_collage_table.ui-sortable .ui-sortable-helper.drag {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+
+#manage_collage_table .ui-sortable-helper td, #manage_collage_table .ui-sortable-placeholder {
+  border: 0;
+}
+
+.drag_drop_save {
+  padding: 6px 0;
+  overflow: hidden;
+}
+
+.headerSort {
+  cursor: pointer;
+}
+
+.headerSort span {
+  background: url("../common/table-order.png") no-repeat scroll right -38px transparent;
+  padding: 0px 20px 0 0;
+}
+
+.headerSortDown span {
+  background: url("../common/table-order.png") no-repeat scroll right 4px transparent;
+}
+
+.headerSortUp span {
+  background: url("../common/table-order.png") no-repeat scroll right -79px transparent;
+}
+
+.headerSort.sorter-false,
+.headerSort.sorter-false span {
+    background-image: none;
+    cursor: default;
+}
+
+.album_votes {
+  text-align: center;
+}
+
+.favoritecount {
+  font-size: 150%;
+  font-weight: bold;
+}
+
+.favoritecount_small {
+  font-size: 110%;
+  font-weight: bold;
+}
+
+ul.votedalbums li {
+  list-style: none;
+  list-style-type: none;
+  margin: 0;
+}
+
+tr.torrent .bookmark>a:before {
+  text-decoration: none;
+  font-weight: normal;
+}
+
+tr.torrent .bookmark>a:after {
+  text-decoration: none;
+  font-weight: normal;
+}
+
+#sortable {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 50%;
+}
+
+#sortable li {
+  padding: 0px;
+  font-size: 1.2em;
+  height: 1.5em;
+}
+
+
+.ui-state-highlight {
+  background: #007DC6 /*{bgColorHighlight}*/;
+  opacity: 0.15;
+  width: 50%;
+
+}
+
+.navigation_list, .navigation_list ol {
+  list-style-position: inside;
+  margin-top: 2px;
+  margin-bottom: 20px;
+}
+
+.navigation_list > li {
+  list-style-type: upper-roman !important;
+}
+
+.navigation_list li li {
+  list-style-type: decimal;
+}
+
+.navigation_list li li li {
+  list-style-type: lower-roman;
+}
+
+.navigation_list li li li li {
+  list-style-type: lower-alpha;
+}
+
+.voted_type {
+  font-weight: bold;
+}
+
+.torrent_table .group .votes_info_td strong {
+  font-size: inherit;
+}
+
+.torrent_table td.shrink {
+  width: 0.1%;
+}
+
+.invite_table td {
+  min-width: 55px;
+}
+
+.preview_wrap {
+  text-align: right;
+}
+
+.text_preview {
+  min-height: 100px
+}
+
+.brackets {
+  text-indent: 0px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.votespan.brackets:before {
+  content: "( ";
+}
+
+.votespan.brackets:after {
+  content: " )";
+}
+
+.brackets:before {
+  content: "[";
+}
+
+.brackets:after {
+  content: "]";
+}
+
+#userinfo .brackets:before, #userinfo .brackets:after {
+  content: "";
+}
+.group_image {
+  overflow: hidden;
+}
+.float_left {
+  float: left !important;
+}
+.float_right {
+  float: right !important;
+}
+.float_clear {
+  clear: both !important;
+}
+.group_image + .group_info {
+  margin-left: 100px;
+}
+
+.group_image img {
+  cursor: pointer;
+}
+
+.user_title {
+  font-weight: normal;
+}
+
+/*
+ * Fix long filename tables overflowing (Chrome only).
+ * Stop various release page containers from overflowing with long input.
+ * !! Be sure to test all major browsers before changing this section. !!
+ * Fix report information tables overflowing long reports (all browsers).
+ * Fix long release descriptions overflowing containers (all browsers).
+ * Fix flowing issues in the report resolving pages.
+ */
+.wrap_overflow, .filelist_table td, .reportinfo_table, .torrentdetails blockquote {
+  word-break: normal;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  /* Note that IE will have different behavior on word-break,
+   * but this is required to keep the layout from breaking. */
+  -ms-word-break: break-all;
+}
+/* Non-web-standard for webkit */
+.torrentdetails blockquote {
+  word-break: break-word;
+}
+/* Fix long filename tables overflowing (Chrome only). */
+.filelist_table td:first-child {
+  word-break: break-all;
+}
+/* Fix long overflow for Opera (doesn't support word-break). */
+.reportinfo_table {
+  table-layout: fixed;
+}
+/* Wrap release info for consistent DOM and to limit table expansion. */
+.no_overflow {
+  width: 100%;
+  overflow: hidden;
+}
+/* Stylesheet gallery in user profile editing */
+#css_gallery {
+  overflow: hidden;
+  margin-top: 10px;
+}
+.preview_wrapper {
+  position: relative;
+  display: inline-block;
+  width: 40%;
+  margin: 0 10px;
+}
+.preview_image {
+  display: block;
+  cursor: pointer;
+  overflow: hidden;
+}
+.preview_image img {
+  width: 100%;
+}
+.preview_name {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.option_group {
+  margin-bottom: 10px;
+}
+.option_group:last-child {
+  margin-bottom: 0px;
+}
+
+.autocomplete-suggestions {
+  color: #000;
+  margin-top: 5px;
+  border: 1px solid #999;
+  background: #FFF;
+  overflow: auto;
+}
+.autocomplete-suggestion {
+  padding: 2px 5px;
+  white-space: pre-wrap;
+  overflow: hidden;
+  cursor: pointer;
+}
+.autocomplete-selected {
+  background: #F0F0F0;
+}
+.autocomplete-suggestions strong {
+  font-weight: normal;
+  color: #3399FF;
+}
+
+.process_info {
+  table-layout: fixed;
+  width: 100%;
+}
+.process_info_pid {
+  width: 70px;
+}
+.process_info_data {
+  overflow: auto;
+}
+
+.setting_description > * {
+  margin: 1em 0 0 0;
+}
+
+.settings_sidebar {
+  min-height: 385px;
+}
+
+#settings_sections {
+  position: absolute;
+}
+
+#settings_sections.fixed {
+  position: fixed;
+  top: 0px;
+}
+
+#settings_sections #submit, #settings_sections #settings_search {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 100%;
+}
+
+#settings_sections h2 {
+  text-align: left;
+}
+
+.forum_post .colhead_dark div {
+  display: flex;
+}
+
+.forum_post .colhead_dark div > *{
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.donor_icon {
+  margin-left: 2px;
+  margin-right: 2px;
+  max-width: 16px;
+  max-height: 16px;
+  position: relative;
+}
+
+.badge_icon {
+  margin: 0px 2px;
+  position: relative;
+}
+
+.donation_info {
+  padding: 10px 10px 10px 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.donation_info_title {
+  display: block;
+  font-size: 1.75em;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.number_column {
+  text-align: right;
+}
+
+.wide_input_text {
+  width: 95%;
+}
+
+.top_artist_list li {
+  margin-left: 25px;
+  margin-bottom: 5px;
+  list-style-type: decimal;
+  font-size: 150%;
+}
+
+.permission_subcontainer {
+  margin-bottom: 10px;
+}
+
+.noborder {
+  border: none;
+}
+
+.two_columns {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.field_div {
+  margin-bottom: 10px;
+}
+
+.field_div:last-of-type {
+  margin-bottom: 0;
+}
+
+.field_div .label,
+.submit_div .label {
+  float: right;
+  padding: 0 5px;
+  text-align: right;
+  width: 150px;
+}
+.field_div .input,
+.submit_div .input {
+  padding: 0 5px;
+}
+
+.small_label {
+  text-align: right;
+  width: auto;
+}
+
+.scale_image {
+  max-width: 500px;
+}
+
+.display_block {
+  display: block;
+}
+
+.sidebar img {
+  max-width: 100%;
+  width: initial;
+}
+
+.forum_post td div img {
+  max-width: 62%;
+}
+
+.avatar > a > img {
+  display: block;
+}
+
+#collage #reply_box img,
+#forums #reply_box img {
+  max-width: 650px;
+}
+
+#torrent_comments {
+  padding-top: 1rem;
+}
+
+#artistcomments #reply_box img,
+#request_comments #reply_box img,
+#torrent_comments #reply_box img {
+  max-width: 400px;
+}
+
+#artistcomments img,
+#request_comments img,
+#torrent_comments img {
+  max-width: 417px;
+}
+
+.blog_post img {
+  max-width: 825px;
+}
+
+.torrent_description img.scale_image,
+.thanks {
+  max-width: 100%!important;
+}
+
+#artist_information img,
+.box_request_desc img,
+.news_post img,
+.wiki_article img {
+  max-width: 80%;
+}
+
+.torrentdetails img {
+  max-width: 75%;
+}
+
+#inbox #preview img,
+#staffpm #reply_box img,
+#wiki .create_form img,
+#wiki .edit_form img {
+  max-width: 80%;
+}
+
+#inbox .body img {
+  max-width: 70%;
+}
+
+#inbox .search_form input[type="search"] {
+  width: 100%;
+  margin: 10px 0px 0px;
+}
+
+#inbox .manage_form input[type="submit"] {
+  margin: 10px 7px 10px 0px;
+}
+
+#userform img {
+  max-width: 490px;
+}
+
+video, .profileinfo img {
+  max-width: 100%;
+}
+
+#reportsv2 .manage_form img {
+  max-width: 616px;
+}
+
+.friends_table textarea {
+  max-width: 540px;
+}
+
+div.torrent_artists {
+  display: inline-block;
+}
+
+.torrent_screenshots > img {
+  width: 50%;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+/* Ratio Colors */
+.r00           { color: #FF0000; }
+.r01,.r02      { color: #FF1300; }
+.r03           { color: #b70000; }
+.r04           { color: #a20000; }
+.r05,.r06      { color: #8e0000; }
+.r07           { color: #983100; }
+.r08           { color: #8c4802; }
+.r09           { color: #787b06; }
+.r10           { color: #74C42E; }
+.r20           { color: #85dd37; }
+.r30,.r40,.r50,.r99 { color: #00fff6 }
+
+#coverCont {
+  position: fixed;
+  max-width: 15%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 9999;
+}
+
+#coverCont img {
+  max-width: 100%;
+}
+
+#covers img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search_warning {
+  position: absolute;
+}
+
+#admincommentlinks {
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+.poll_your_answer:before {
+  content: "\f100  ";
+  font-family: FontAwesome;
+}
+
+div.poll_header {
+  margin-bottom: 20px;
+}
+
+.net_box {
+  display: inline-block;
+  width: calc(20% - 4px);
+  margin: 2px;
+  vertical-align: top;
+  font-size: 10pt;
+}
+.net_box > .box {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+}
+.net_box > .box > span {
+  width: 100%;
+}
+
+.mediainfo td {
+  vertical-align: top;
+}
+
+.flex {
+  display: flex;
+}
+.flex > .grow {
+  flex-grow: 1
+}
+.flex > .shrink {
+  flex-shrink: 1
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+
+.hidden {
+  display: none;
+}
+
+form.edit_form[name=screenshots_form] input[type=text], form.edit_form[name=screenshots_form] img {
+  width: 400px;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 8px;
+}
+
+div.desc a {
+  padding: 4px;
+}
+
+.movies_chart {
+  text-align: center;
+  border-spacing: 13px !important;
+  border-collapse: separate !important;
+}
+
+td.movie-item {
+  width: 20%;
+  height: auto;
+  padding: 4px !important;
+}
+
+td.movie-item:hover {
+  border: 1px solid #777;
+}
+
+div.movie-item-tags {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+.style_prevu_kit {
+  display:inline-block;
+  border:0;
+  width:196px;
+  height:210px;
+  position: relative;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1);
+  transition: all 200ms ease-in;
+  transform: scale(1);
+
+}
+.style_prevu_kit:hover {
+  box-shadow: 0px 0px 150px #000000;
+  z-index: 2;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1.5);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1.5);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1.5);
+  transition: all 200ms ease-in;
+  transform: scale(1.5);
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: right;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid transparent;
+  border-top: none;
+}
+
+.tabcontent-active {
+  display: contents;
+}
+
+.tabcontent {
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* user classes colors */
+.permission_staff {
+  font-weight: bold;
+  color: #026ad4;
+}
+
+.permission_1000 { /* SYSOP */
+  font-weight: bold;
+  color: #cd0010;
+}
+.permission_900 { /* STAFF_LEADER */
+  font-weight: bold;
+  color: #F0133F;
+}
+.permission_800 { /* ADMINISTRATOR */
+  font-weight: bold;
+  color: #026ad4;
+}
+.permission_700 { /* CODER */
+  font-weight: bold;
+  color: #b72b06;
+}
+.permission_600 { /* MODERATOR */
+  font-weight: bold;
+  color: #c46ebd;
+}
+.permission_450 { /* FLS */
+  font-weight: bold;
+  color: #66CCFF;
+}
+.permission_400 { /* DESIGNER */
+  color: #FF0099;
+}
+.permission_205 { /* UPLOADER */
+  color: #00AB22;
+}
+.permission_200 { /* MINI_UPLOADER */
+  color: #00FF99;
+}
+.permission_150 { /* STAFF_LEGEND */
+  color: #FF9900;
+}
+.permission_100 { /* VIP */
+  color: #FFF300;
+}
+.permission_17 { /* HEB_GOD */
+  color: #66CC99;
+}
+.permission_16 { /* HEB_SUPREME */
+  color: #CC9933;
+}
+.permission_15 { /* HEB_ELITE */
+  color: #99CC00;
+}
+.permission_14 { /* HEB_FANATIC */
+  color: #66CC00;
+}
+.permission_13 { /* HEB_VETERAN */
+  color: #006600;
+}
+.permission_12 { /* HEB_LOVER */
+  color: #003300;
+}
+.permission_11 { /* HEB_USER */
+  font-weight: bold;
+  color: #000000;
+}
+.permission_10 { /* HEB_ROOKIE */
+  color: #000000;
+}
+/* end of user classes colors */
+
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% { opacity: 0; }
+}
+
+.centerform.topborder {
+  border-top: 1px solid black;
+}
+
+.centerform tr td:nth-child(1) {
+  text-align: left;
+  width: 50%;
+}
+
+.centerform tr td:nth-child(2) {
+  text-align: right;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.text_left {
+  text-align: left;
+}
+
+.rightltr {
+  text-align: right;
+  direction: ltr;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.description {
+  width: 50%;
+  margin-bottom: 1rem;
+}
+
+.lottery_header {
+  font-size: 0.9rem!important
+}
+
+.warning {
+  background-color: red!important;
+  color: black!important;
+}
+
+.bg_green {
+  background-color:green;
+}
+
+.invitetree_list .invitetree_list {
+  padding-right:1rem;
+}
+
+.lottery_history {
+  display:inline-table;
+  width:25%;
+}
+
+.bbcode-popup-color {
+  cursor: pointer;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin: 1px;
+}
+
+.bb-size-1 {
+  font-size:0.75em
+}
+.bb-size-2 {
+  font-size:1em
+}
+.bb-size-3 {
+  font-size:1.25em
+}
+.bb-size-4 {
+  font-size:1.5em
+}
+.bb-size-5 {
+  font-size:1.75em
+}
+.bb-size-6 {
+  font-size:2em
+}
+.bb-size-7 {
+  font-size:2.25em
+}
+.bb-size-8 {
+  font-size:2.5em
+}
+.bb-size-9 {
+  font-size:2.75em
+}
+.bb-size-10 {
+  font-size:3em
+}
+
+html.cursor_progress,
+html.cursor_progress * {
+  cursor: progress!important;
+}
+
+.globalbox {
+  max-width: 40%;
+  margin: 0 auto;
+  margin-bottom: 3px !important;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.forum_index thead th {
+  text-align: right;
+}
+
+#user .box ul.stats.nobullet li,
+#user .sidebar {
+  font-size: 0.92rem;
+}
+
+.upload_stat{
+  color: #00ff2a;
+}
+.down_stat{
+  color: #ff0000;
+}
+
+.reportsv2 {
+  margin: auto 1% auto 1%;
+  width: 46%!important;
+}
+
+.reportsv2 table {
+  margin-bottom: 1rem;
+}
+
+div[data-load-report] {
+  margin-top: 1rem;
+}
+
+#commentrules {
+  border: 1px solid;
+  padding: 1rem;
+  margin-bottom: 6px;
+}
+
+#staffpmrules {
+  border: 1px solid;
+  padding: 1rem;
+  margin-bottom: 6px;
+  text-align: initial;
+}
+
+.comment_rules {
+  margin-bottom: 6px;
+}
+
+.cats_col {
+  font-size: 28px;
+  width: 64px;
+}
+
+.torrent_in_group {
+	padding-right: 65px;
+}
+
+.torrent_icons {
+  font-size: 1.3em;
+  white-space: nowrap;
+}
+
+.torrent_icons a{
+  padding: 1px
+}
+
+.torrent_link_name {
+  display: inline-block; 
+  font-size: 0.82rem;
+}
+
+.torrent_title {
+  padding-top: 13px;
+  padding-bottom: 2px;
+}
+
+#forums .code_block{
+  width: 800px!important;
+  max-width: 90%!important;
+}
+
+.mediainfo tr > td:not(:first-child) > table tr > td:not(:first-child) {
+  text-align: right;
+  direction: ltr;
+}
+
+#remoteTable input[type=text][disabled]:hover,
+#remoteTable select[disabled],
+#remoteTable input[type=button][disabled] {
+  cursor: not-allowed;
+}
+
+#remoteImage {
+  background-size:contain;
+  background-position:center;
+  background-repeat:no-repeat;
+  text-align:center;
+  width:20em;
+}
+
+.linklist {
+  padding: 10px !important;
+}
+
+ul.postlist,
+ul.postlist li {
+  direction: inherit;
+  text-align: inherit;
+}
+
+.torrent_info,
+.torrent_link_name {
+  word-break: break-all;
+}
+
+.center_box {
+  margin: 0 auto
+}
+
+.tooltip_alt .tooltipster_base {
+  background-color: rgba(0, 0, 0);
+}
+
+.centertable {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#series_info td {
+  border: solid thin #555 !important;
+  width: 50%;
+}
+
+.inline {
+  display:inline;
+}
+
+.rec_img {
+  margin: 0;
+  padding: 0;
+  min-width: 64px;
+  width: 64px;
+}
+
+.country {
+  font-weight: bold;
+  text-decoration: underline; 
+}
+
+#totop {
+  display: none;
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  z-index: 99;
+  cursor: pointer;
+}
+
 body, .tdhack {
     background-image: url('images/bg.png');
     background-color: #15242c;
