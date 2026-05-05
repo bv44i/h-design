@@ -2,7 +2,7 @@
    GAZELLE MODERN V2 - FULL RTL & OCEAN INTEGRATION
    Merges: base.css (Structure) + V2 (Design) + RTL Fixes
    ============================================================ */
-
+@import url("./common.css");
 /* ── 1. COLOR VARIABLES (OCEAN PALETTE) ── */
 :root {
   --bg0: #0c1318; --bg1: #131e26; --bg2: #192835; --bg3: #213344; --bg4: #2a4056; --bg5: #365068;
