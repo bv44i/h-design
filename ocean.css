@@ -1,5 +1,5 @@
 /* ============================================================
-   GAZELLE MODERN INTEGRATED V6 - FULL FEATURE + RTL STABLE
+   GAZELLE MODERN INTEGRATED V7 - RESTORED NAVBAR SELECTORS
    ============================================================ */
 
 :root, .palette-ocean {
@@ -17,13 +17,6 @@
   --ac: #e060c8; --ac-rgb: 224, 96, 200; --ac-dim: rgba(224, 96, 200, 0.13); --ac-glow: rgba(224, 96, 200, 0.22); --ac-text: #2a0820;
 }
 
-.palette-amber {
-  --bg0: #130e08; --bg1: #1f1610; --bg2: #291e14; --bg3: #352719; --bg4: #473422; --bg5: #5c4430;
-  --b0: rgba(230, 180, 100, 0.07); --b1: rgba(230, 180, 100, 0.15); --b2: rgba(230, 180, 100, 0.26); --b3: rgba(230, 180, 100, 0.45);
-  --t0: #fdf4e8; --t1: #e8d4b0; --t2: #b89060; --t3: #7a5c38;
-  --ac: #f5a030; --ac-rgb: 245, 160, 48; --ac-dim: rgba(245, 160, 48, 0.13); --ac-glow: rgba(245, 160, 48, 0.22); --ac-text: #2a1400;
-}
-
 /* 1. RESET & RTL ENGINE */
 * { box-sizing: border-box !important; }
 
@@ -32,59 +25,98 @@ html, body {
   color: var(--t1) !important;
   direction: rtl !important;
   text-align: right;
-  margin: 0;
-  padding: 0;
+  margin: 0; padding: 0;
   font-family: sans-serif;
-  line-height: 1.6;
 }
 
-/* 2. THE TOP BAR (HEADER RECONSTRUCTION) */
+/* 2. HEADER & NAVBAR RESTORATION */
 #header {
-  position: relative;
   background-color: var(--bg1);
-  width: 100%;
   border-bottom: 2px solid var(--ac);
-  padding-top: 45px; /* Adjust if user bar overlaps */
+  padding: 0;
+  width: 100%;
 }
 
+/* User Info Bar (Stats, Logout, etc) */
 #userinfo {
-  position: absolute;
-  top: 0; right: 0; left: 0;
-  height: 40px;
   background: var(--bg2);
-  display: flex !important;
-  align-items: center;
-  justify-content: flex-start; /* Aligns items to the right in RTL */
-  padding: 0 20px;
-  margin: 0;
-  list-style: none;
   border-bottom: 1px solid var(--b1);
+  margin: 0;
+  padding: 8px 20px;
+  list-style: none;
+  display: block; /* Restored from Flex to allow standard Gazelle wrapping */
+  text-align: right;
 }
 
-#userinfo li { margin-left: 15px; display: inline-block; font-size: 11px; font-weight: bold; }
+#userinfo li {
+  display: inline-block;
+  margin-left: 12px;
+  font-size: 11px;
+}
 
-#menu { width: 100%; text-align: center; padding: 10px 0; }
-#menu ul { padding: 0; margin: 0; list-style: none; display: flex; justify-content: center; gap: 20px; }
-#menu ul li a { font-size: 14px; color: var(--t0); font-weight: bold; }
+#userinfo a { font-weight: bold; color: var(--t1); }
+#userinfo a:hover { color: var(--ac); }
 
-#searchbars { background: var(--bg1); padding: 10px; display: flex; justify-content: center; gap: 10px; }
-#searchbars input { background: var(--bg2) !important; border: 1px solid var(--b2) !important; color: var(--t0) !important; padding: 4px 8px; border-radius: 4px; }
+/* Main Menu (Torrents, Forums, etc) */
+#menu {
+  background: var(--bg1);
+  padding: 12px 0;
+  text-align: center;
+}
 
-/* 3. LAYOUT (RTL CORRECTED) */
+#menu ul {
+  list-style: none;
+  margin: 0; padding: 0;
+}
+
+#menu li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+#menu li a {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--t0) !important;
+  padding: 5px 8px;
+}
+
+#menu li a:hover {
+  background: var(--b1);
+  border-radius: 4px;
+}
+
+/* Search Bars Fix */
+#searchbars {
+  background: var(--bg0);
+  padding: 8px;
+  border-top: 1px solid var(--b1);
+  text-align: center;
+}
+
+#searchbars ul { list-style: none; padding: 0; margin: 0; display: inline-flex; gap: 10px; }
+
+#searchbars input {
+  background: var(--bg2) !important;
+  border: 1px solid var(--b2) !important;
+  color: var(--t0) !important;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+/* 3. LAYOUT */
 .thin { width: 95%; max-width: 1300px; margin: 20px auto !important; }
-
 .main_column { float: right !important; width: 74% !important; }
 .sidebar { float: left !important; width: 24% !important; }
-
 .thin:after { content: ""; display: table; clear: both; }
 
-/* 4. BOXES & TABLES */
-.box, .panel__body, .sidebar .box, .news_post .pad {
+/* 4. CONTENT BLOCKS */
+.box, .panel__body, .sidebar .box {
   background: var(--bg2) !important;
   border: 1px solid var(--b1) !important;
-  border-radius: 8px;
   margin-bottom: 20px;
   padding: 12px;
+  border-radius: 8px;
 }
 
 .head, .colhead, .colhead_dark, tr.colhead, thead th {
@@ -92,20 +124,16 @@ html, body {
   color: var(--t0) !important;
   padding: 10px 15px !important;
   border-bottom: 2px solid var(--bg0) !important;
-  text-transform: uppercase;
-  font-size: 12px;
 }
 
 td { background: var(--bg2) !important; border-bottom: 1px solid var(--b0) !important; padding: 8px !important; }
-tr.group td { background: var(--bg1) !important; }
 
-/* 5. FORM OVERRIDES (High Specificity) */
+/* 5. FORMS & BUTTONS */
 :root body input, :root body textarea, :root body select {
   background-color: var(--bg1) !important;
   color: var(--t0) !important;
   border: 1px solid var(--b2) !important;
-  padding: 8px !important;
-  border-radius: 4px;
+  padding: 6px !important;
 }
 
 :root body input[type="submit"], :root body input[type="button"], :root body button {
@@ -113,33 +141,22 @@ tr.group td { background: var(--bg1) !important; }
   color: var(--t0) !important;
   border: 1px solid var(--b3) !important;
   cursor: pointer;
-  font-weight: bold;
 }
 
-/* 6. USER CLASS & PERMISSION COLORS */
-.permission_1000 { color: #ff4d4d !important; font-weight: bold; } /* SYSOP */
-.permission_800  { color: #3399ff !important; font-weight: bold; } /* ADMIN */
-.permission_600  { color: #d68fcc !important; font-weight: bold; } /* MOD */
-.permission_100  { color: #FFF300 !important; } /* VIP */
-
-/* Ratio Colors */
+/* 6. PERMISSIONS & STATS */
+.permission_1000 { color: #ff4d4d !important; font-weight: bold; }
+.permission_800  { color: #3399ff !important; font-weight: bold; }
 .r00 { color: var(--err) !important; }
 .r10 { color: var(--ok) !important; }
-.upload_stat { color: var(--ok) !important; }
-.down_stat { color: var(--err) !important; }
 
-/* 7. BBCODE & ICONS */
-blockquote { background: var(--bg1) !important; border-right: 4px solid var(--ac) !important; border-left: none !important; padding: 10px; margin: 10px 0; }
-.tags a { background: var(--bg3) !important; color: var(--ac) !important; padding: 2px 8px; border-radius: 10px; font-size: 11px; margin: 2px; display: inline-block; }
+/* 7. BBCODE RTL FIX */
+blockquote { 
+  background: var(--bg1) !important; 
+  border-right: 4px solid var(--ac) !important; 
+  border-left: none !important; 
+  padding: 10px; margin: 10px 0; 
+}
 
-.token_ic { color: #ff7fff !important; }
-.download_ic { color: #90ee90 !important; }
-.internal-mark { color: var(--warn) !important; }
-
-/* 8. MISC FIXES */
+/* 8. LOGO & MISC */
 #logo { margin: 20px 0; text-align: center; }
 #totop { filter: invert(1); }
-
-@media (max-width: 900px) {
-  .main_column, .sidebar { width: 100% !important; float: none !important; }
-}
