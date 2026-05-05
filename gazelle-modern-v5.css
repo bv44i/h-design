@@ -10,7 +10,3581 @@
      .palette-violet   = Nebula (violet/purple)
      .palette-mono     = Carbon (cool gray/white)
    ============================================================ */
+ @import url(../font-awesome/css/font-awesome.css);
 
+@import url(../bbcode/style.css);
+
+
+#user .main_column table[cellpadding="0"] tr td,
+
+button,
+
+form input,
+
+form textarea,
+
+input,
+
+input[type=search],
+
+keygen,
+
+select,
+
+textarea {
+
+border: none
+
+}
+
+
+.forum-post__body,
+
+.forum_post td.body {
+
+word-break: break-word;
+
+line-height: 1.4
+
+}
+
+
+#header,
+
+body {
+
+-webkit-font-smoothing: antialiased !important
+
+}
+
+
+@font-face {
+
+font-family: 'Source Sans Pro';
+
+font-style: normal;
+
+font-weight: 400;
+
+src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url(../fonts/sourcesanspro-lne.woff2) format('woff2');
+
+unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF
+
+}
+
+
+@font-face {
+
+font-family: 'Source Sans Pro';
+
+font-style: normal;
+
+font-weight: 400;
+
+src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url(../fonts/sourcesanspro-ln.woff2) format('woff2');
+
+unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000
+
+}
+
+
+#header a:focus,
+
+#header a:hover,
+
+#summary .ui-widget-content a,
+
+#wrapper .alert-bars a,
+
+a,
+
+div#footer p:after,
+
+tr.inbox-message--unread td a,
+
+tr.unreadpm a,
+
+ul.ui-autocomplete.ui-menu.ui-widget li a:focus,
+
+ul.ui-autocomplete.ui-menu.ui-widget li a:hover {
+
+color: #32867d
+
+}
+
+
+#torrents .torrent_table a[onclick*=toggle],
+
+#content .forum_post .colhead_dark a:focus,
+
+#content .forum_post .colhead_dark a:hover,
+
+#wrapper .alert-bars a:hover,
+
+.colhead td a:hover,
+
+a:hover,
+
+a[href*="torrents.php?id"]:hover {
+
+color: #000
+
+}
+
+
+#header .new-subscriptions a,
+
+#header a.username,
+
+#menu ul>li>a:hover,
+
+#torrents .torrent_table a[onclick*=toggle]:hover,
+
+#userinfo_minor a:hover,
+
+a[href*="torrents.php?id"]:hover,
+
+a[href*="torrents.php?id"][title="View Torrent"],
+
+table#torrent_table a[href*="torrents.php?torrentid"] strong,
+
+td a:hover {
+
+color: #32867d
+
+}
+
+
+#userinfo_minor>li>ul {
+
+display: none;
+
+background: #1A1A1A;
+
+padding: 6px 10px;
+
+margin-top: 7px;
+
+position: absolute
+
+}
+
+
+.btn,
+
+.disabled-btn {
+
+padding: 5px 8px !important
+
+}
+
+
+#userinfo_minor>li>ul>li {
+
+display: block
+
+}
+
+
+.btn {
+
+color: #fff;
+
+background: #6cb3ae !important
+
+}
+
+
+.btn:hover,
+
+.disabled-btn {
+
+background: #b5b5b5 !important
+
+}
+
+
+.btn:hover {
+
+color: #fff !important
+
+}
+
+
+.disabled-btn {
+
+color: #fff
+
+}
+
+
+::-webkit-input-placeholder {
+
+color: #848484
+
+}
+
+
+::-moz-placeholder {
+
+color: #848484
+
+}
+
+
+:-ms-input-placeholder {
+
+color: #848484
+
+}
+
+
+#taglist tr td a,
+
+.sidebar .stats.nobullet a,
+
+.tags a {
+
+background: #9C9C9C
+
+}
+
+
+#header .alertbar a:hover {
+
+color: #f7f7f7
+
+}
+
+
+#index .sidebar .stats.nobullet a,
+
+.group_info>a:nth-child(2n),
+
+.group_info>a:nth-child(3n),
+
+td.unread:before,
+
+td.unread_locked:before,
+
+td.unread_locked_sticky:before,
+
+td.unread_sticky:before {
+
+color: #32867d
+
+}
+
+
+form.search_form input[type=submit],
+
+form.search_form input[type=button],
+
+input[type=submit],
+
+input[type=button] {
+
+background: #6cb3ae
+
+}
+
+
+.forum_category_title {
+
+text-align: right !important;
+
+color: #fff;
+
+background-color: #32867d
+
+}
+
+
+#header,
+
+div#last5 {
+
+text-align: center
+
+}
+
+
+.forum_post a {
+
+color: #32867d
+
+}
+
+
+li#nav_subscriptions.new-subscriptions a {
+
+color: #3c9454 !important
+
+}
+
+
+#inbox .box .head a:focus,
+
+#inbox .box .head a:hover,
+
+#request_table .rowa td>a:nth-child(2n),
+
+#request_table .rowb td:first-of-type>a:nth-child(2n),
+
+.box.filter_torrents .head a:focus,
+
+.box.filter_torrents .head a:hover,
+
+.forum_post .colhead a:hover,
+
+.forum_post .colhead_dark a:focus {
+
+color: #32867d
+
+}
+
+
+#header .alertbar a,
+
+#header>#menu ul>li.active>a {
+
+color: #32867d
+
+}
+
+
+#blog .head,
+
+#inbox .box .head,
+
+#inbox form .send_form #quickpost h3,
+
+#reply_box h3,
+
+.box.filter_torrents .head,
+
+.box.news_post .head,
+
+.colhead td,
+
+.colhead_dark td,
+
+.head.colhead_dark,
+
+.main_column .box .head,
+
+.main_column .box .head.colhead_dark,
+
+.sidebar .box .head,
+
+tr.colhead,
+
+tr.colhead_dark {
+
+background: #5aada5
+
+}
+
+
+.ui-widget-content a:hover {
+
+color: #70b3ab !important
+
+}
+
+
+:after,
+
+:before {
+
+-webkit-box-sizing: border-box;
+
+-moz-box-sizing: border-box;
+
+box-sizing: border-box
+
+}
+
+
+* {
+
+direction: rtl;
+
+padding: 0;
+
+margin: 0
+
+}
+
+
+ul#userinfo_minor>li>a {
+
+padding: 0 20px
+
+}
+
+
+h2 {
+
+font-size: .9rem
+
+}
+
+
+.torrent_info_row .preformatted-text--scrolled {
+
+white-space: normal
+
+}
+
+
+.sidebar {
+
+padding: 0 0 0 5px
+
+}
+
+
+.thin>div {
+
+margin-top: 2px
+
+}
+
+
+body h1,
+
+body h2,
+
+body h3,
+
+body h4 {
+
+padding: 5px 0
+
+}
+
+
+.linkbox,
+
+.pagination.pagination--bottom.js-pagination,
+
+.pagination.pagination--top.js-pagination,
+
+td {
+
+padding: 5px
+
+}
+
+
+li#nav_subscriptions a,
+
+li#nav_subscriptions a:hover {
+
+font-weight: 400
+
+}
+
+
+.box,
+
+.head,
+
+.panel__body,
+
+.panel__heading {
+
+padding: 10px
+
+}
+
+
+#forums table.forum_post tr td:nth-child(2n) a {
+
+font-weight: inherit
+
+}
+
+
+#series tr.colhead_dark td,
+
+#torrents tr.colhead_dark td,
+
+.forum-post__heading,
+
+.toggleable-search-form__toggler-container,
+
+thead th {
+
+padding: 10px 10px 9px
+
+}
+
+
+.box .head {
+
+margin: -10px -10px 6px !important
+
+}
+
+
+div#covers>div:first-of-type {
+
+margin-top: -6px
+
+}
+
+
+.head {
+
+margin-bottom: 6px
+
+}
+
+
+table.torrent_table .group_torrent td {
+
+font-size: .75rem
+
+}
+
+
+span#rippy-says a[href*="torrents.php?id"] {
+
+color: inherit
+
+}
+
+
+span#rippy-says a[href*="torrents.php?id"]:hover {
+
+color: inherit;
+
+text-decoration: underline
+
+}
+
+
+.forum_list h3,
+
+.pagination.pagination--bottom,
+
+.pagination.pagination--top {
+
+padding: 5px
+
+}
+
+
+a.last_read>svg {
+
+fill: #a7a7a7;
+
+margin: 2px 6px
+
+}
+
+
+span.last_read {
+
+margin-left: 5px
+
+}
+
+
+#torrent_details span[style="text-shadow: 0px 0px 2px black, 0px 0px 4px black, 0px 0px 8px black, 0px 0px 10px black; color: orange; font-family: Candara, sans-serif;"] {
+
+text-shadow: none !important;
+
+color: inherit !important;
+
+font-size: inherit !important;
+
+font-family: inherit !important
+
+}
+
+
+.sidebar .stats.nobullet a {
+
+padding: 3px 6px
+
+}
+
+
+#content td.avatar,
+
+.min_padding {
+
+padding: 0
+
+}
+
+
+.head[style="height: 13px;"] {
+
+height: 36px !important
+
+}
+
+
+tr.colhead {
+
+font-weight: 700
+
+}
+
+
+#torrents table.forum_post tr.colhead_dark td,
+
+.forum_post .colhead_dark td {
+
+padding: 0 7px
+
+}
+
+
+.forum_post {
+
+margin-bottom: 10px;
+
+}
+
+
+blockquote {
+
+margin: 10px;
+
+padding: 10px;
+
+max-width: 90%
+
+}
+
+
+.box.box_albumart {
+
+padding-bottom: 0
+
+}
+
+
+.box.box_albumart p {
+
+margin-left: -10px;
+
+margin-right: -10px
+
+}
+
+
+.box.box_albumart p img {
+
+max-width: 100% !important;
+
+min-width: 100%
+
+}
+
+
+#content>.thin>h2 {
+
+margin-top: 2px
+
+}
+
+
+#index .thin>div,
+
+#kb #content,
+
+#nfo #content,
+
+#series>#content,
+
+#showslist #content,
+
+#store #content {
+
+margin-top: 10px
+
+}
+
+
+#user .sidebar div[align=center] {
+
+min-width: 100%;
+
+padding: 0 !important;
+
+margin: -6px -10px -10px
+
+}
+
+
+div#last5:last-child {
+
+border-right: none
+
+}
+
+
+.of_the_month>.box:first-child {
+
+width: calc(50% - 2px);
+
+margin-right: 2px
+
+}
+
+
+.of_the_month>.box {
+
+width: 50%;
+
+display: block;
+
+box-sizing: border-box
+
+}
+
+
+.of_the_month>.box ul.stats.nobullet {
+
+margin-left: -10px;
+
+margin-right: -10px
+
+}
+
+
+.of_the_month>.box ul.stats.nobullet li {
+
+padding-right: 10px;
+
+padding-left: 10px
+
+}
+
+
+.of_the_month>.box ul.stats.nobullet li:first-child {
+
+padding: 0
+
+}
+
+
+#user #slider .scroll,
+
+.forum-post__bodyguard iframe {
+
+width: 100%
+
+}
+
+
+div#last5 {
+
+width: 20%;
+
+width: calc(20% - 2px) !important;
+
+margin: 0 2px 0 0 !important;
+
+padding: 0 !important;
+
+display: block !important;
+
+float: left !important;
+
+box-sizing: border-box
+
+}
+
+
+div#last5:last-of-type {
+
+margin-right: 0 !important;
+
+width: 20% !important
+
+}
+
+
+div#latest5>div {
+
+margin-left: -10px;
+
+margin-right: -10px;
+
+margin-top: -6px
+
+}
+
+
+.forum_list h3,
+
+table.forum_index {
+
+margin-bottom: 2px
+
+}
+
+
+input[type=submit],
+
+input[type=button] {
+
+padding: 5px 8px
+
+}
+
+
+#taglist tr td a,
+
+.huge-movie-list__movie__tag-list a,
+
+.movie-tooltip__tag,
+
+.tags a,
+
+a.basic-movie-list__movie__tag,
+
+a.cover-movie-list__movie__tag,
+
+ul.stats.nobullet li a[href*="torrents.php?taglist="] {
+
+padding: 3px 6px;
+
+margin: 1px
+
+}
+
+
+#searchbars li input,
+
+#searchbars li input:focus,
+
+#searchbars li input:hover,
+
+.search-bar li input,
+
+.search-bar li input:focus,
+
+.search-bar li input:hover {
+
+padding: 5px 6px;
+
+margin: 0 3px
+
+}
+
+
+#searchbars input {
+
+padding: 3px 10px;
+
+width: 95%;
+
+max-width: 135px;
+
+height: 19px;
+
+border: 1px solid #3B3B3B;
+
+background: rgba(0, 0, 0, 0.15);
+
+-webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+
+box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+
+color: #666;
+
+transition: .25s ease-in-out;
+
+-webkit-transition: .25s ease-in-out;
+
+-moz-transition: .25s ease-in-out;
+
+-o-transition: .25s ease-in-out;
+
+border-radius: 20px;
+
+}
+
+
+input,
+
+textarea[name=body] {
+
+padding: 3px 5px
+
+}
+
+
+.qtip-content {
+
+padding: 10px
+
+}
+
+
+.movie-tooltip__director-list div,
+
+.movie-tooltip__ratings,
+
+.movie-tooltip__ratings div {
+
+display: inline-block
+
+}
+
+
+div#searchbars>ul,
+
+div.search-bar>ul {
+
+padding: 4px 0
+
+}
+
+
+ul#userinfo_major>li,
+
+ul#userinfo_stats>li,
+
+ul#userinfo_username>li {
+
+padding: 0 5px
+
+}
+
+
+body {
+
+font-family: 'Segoe UI', Arial, Helvetica, sans-serif, verdana, geneva, lucida, 'lucida grande';
+
+font-size: 13px;
+
+-moz-osx-font-smoothing: grayscale !important;
+
+text-rendering: optimizeLegibility !important
+
+}
+
+
+#banner {
+
+background-size: 100% 100%;
+
+background-repeat: no-repeat;
+
+background-position: center;
+
+padding: 50px 0 50px 0;
+
+position: relative;
+
+}
+
+
+.header-bg-main {
+
+background-image: url(images/main_banner.gif?v=3);
+
+}
+
+
+.header-bg-bd {
+
+background-image: url(images/bd_banner.png?v=4);
+
+}
+
+
+.header-bg-test {
+
+background-image: url(images/test_banner.gif?v=1);
+
+}
+
+
+#content {
+
+margin: 0 auto
+
+}
+
+
+@media (min-width: 544px) {
+
+
+#content,
+
+#searchbars {
+
+max-width: 576px
+
+}
+
+}
+
+
+@media (min-width: 768px) {
+
+
+#content,
+
+#searchbars {
+
+max-width: 720px
+
+}
+
+}
+
+
+@media (min-width: 992px) {
+
+
+#content,
+
+#searchbars {
+
+max-width: 940px
+
+}
+
+}
+
+
+@media (min-width: 1200px) {
+
+
+#content,
+
+#searchbars {
+
+max-width: 1140px
+
+}
+
+}
+
+
+#series .sidebar img,
+
+div.thin>center img#banner,
+
+div[style="height:140px; max-height:140px;max-width:758px;"] {
+
+position: relative
+
+}
+
+
+.signature {
+
+padding-top: 10px;
+
+margin-top: 10px
+
+}
+
+
+#inbox .thin form#messageform[name=message] div.box.pad,
+
+#inbox form#messageform[name=reply] div.box.pad,
+
+.center,
+
+.sign {
+
+text-align: center !important
+
+}
+
+
+body#actorshowcase #content table {
+
+display: inline-block;
+
+width: 24.7%;
+
+text-align: center;
+
+margin: 0 0 7px;
+
+vertical-align: top
+
+}
+
+
+body#actorshowcase #content table tbody {
+
+display: inline-block;
+
+text-align: initial
+
+}
+
+
+body#actorshowcase #content table:first-of-type {
+
+display: none
+
+}
+
+
+.sidebar {
+
+width: 25%;
+
+float: right
+
+}
+
+
+.main-column,
+
+.main_column {
+
+width: 75%;
+
+float: left
+
+}
+
+
+.main_column_index_off {
+
+float: right !important;
+
+}
+
+
+.sidebar_index_off {
+
+float: left !important;
+
+padding: 0 2px 0 0;
+
+}
+
+
+div,
+
+table,
+
+td,
+
+tr {
+
+border-collapse: collapse;
+
+box-sizing: border-box
+
+}
+
+
+h1,
+
+h2,
+
+h3,
+
+h4 {
+
+margin: 0
+
+}
+
+
+a,
+
+tr.unreadpm a {
+
+text-decoration: none;
+
+-webkit-transition: color .25s ease-out;
+
+transition: color .25s ease-out
+
+}
+
+
+ul.navigation li {
+
+display: inline-block !important
+
+}
+
+
+.collage tr td,
+
+.collage tr td:first-child,
+
+.collage tr td:first-of-type,
+
+.collage tr td:last-child,
+
+.collage tr td:last-of-type {
+
+display: inline-block
+
+}
+
+
+#inbox form.send_form #quickpost:after,
+
+#menu:after,
+
+#menu:before,
+
+.box:after,
+
+.box:before,
+
+.main-menu:after,
+
+.main-menu:before,
+
+div#add_cover_div:after,
+
+div#quickreplytext:after {
+
+content: " ";
+
+display: table
+
+}
+
+
+.collage a[href*="torrents.php?id"] img {
+
+max-width: 128.01px
+
+}
+
+
+#staffpm #compose form h3 label[for=message] {
+
+margin: 10px 0 0;
+
+display: block
+
+}
+
+
+#inbox h3,
+
+#reply_box h3,
+
+#staffpm #compose form h3 label[for=message],
+
+#staffpm h3 label {
+
+font-size: 14px
+
+}
+
+
+#staffpm h3 label {
+
+display: block
+
+}
+
+
+#staffpm #inbox h3,
+
+#staffpm form#messageform,
+
+h2,
+
+h3 {
+
+background: inherit
+
+}
+
+
+#inbox #wrapper #content .thin div.box.pad table.message_table.checkboxes {
+
+text-align: right
+
+}
+
+
+#inbox input[type=text] {
+
+margin-bottom: 5px
+
+}
+
+
+.forum_post,
+
+table.message_table.checkboxes {
+
+width: 100%
+
+}
+
+
+.forum_post td.avatar {
+
+width: 0.1%
+
+}
+
+
+.forum_post td.body {
+
+width: 83.4%;
+
+font-size: 14px
+
+}
+
+
+.forum-post__body {
+
+font-size: 14px;
+
+padding: 5px 10px
+
+}
+
+
+#footer,
+
+header {
+
+clear: both;
+
+float: none
+
+}
+
+
+.big_info .group_info.clear span,
+
+.group_torrent span,
+
+.torrent_row span {
+
+float: right
+
+}
+
+
+#footer {
+
+text-align: center
+
+}
+
+
+td.left {
+
+text-align: right
+
+}
+
+
+#content>.thin table#discog_table tr.group_torrent td,
+
+#content>.thin table#torrent_table tr.group_torrent td,
+
+.basic-movie-list__movie__bookmark,
+
+.basic-movie-list__movie__rating-container,
+
+.basic-movie-list__torrent-row,
+
+.cover-movie-list__movie__new,
+
+.cover-movie-list__movie__tags,
+
+.cover-movie-list__movie__year,
+
+.footer,
+
+.huge-movie-list__movie__torrent-summary,
+
+.panel__heading__toggler,
+
+.search-bar__results,
+
+.search-bar__search-field__input {
+
+font-size: .723rem
+
+}
+
+
+.forum_post:last-child,
+
+.forum_post:last-of-type {
+
+margin-bottom: 0
+
+}
+
+
+#menu,
+
+.main-menu {
+
+top: 0;
+
+z-index: 1500;
+
+width: 100%;
+
+height: 50px;
+
+transition: background .5s;
+
+transform: translateZ(0);
+
+min-height: 50px;
+
+border: 1px solid transparent;
+
+text-align: center
+
+}
+
+
+#menu ul>li>a,
+
+.main-menu ul>li>a {
+
+line-height: 20px;
+
+font-size: 14px
+
+}
+
+
+#menu ul>li,
+
+.main-menu ul>li {
+
+padding: 15px 12px
+
+}
+
+
+#header #logo {
+
+margin-top: 10px;
+
+margin-bottom: 10px
+
+}
+
+
+div#logo {
+
+height: 150px;
+
+margin: 0 auto;
+
+filter: drop-shadow(0 0 0 #fff)
+
+}
+
+
+#logo {
+
+background-size: contain
+
+}
+
+
+.mainlogo {
+
+background: url(images/logo.png) no-repeat center;
+
+}
+
+
+.tishreylogo {
+
+background: url(images/logo_t.png) no-repeat center;
+
+}
+
+
+.hanukkalogo {
+
+background: url(images/logo_h.png) no-repeat center;
+
+}
+
+
+.rememberlogo {
+
+background: url(images/logo_r.png) no-repeat center;
+
+}
+
+
+.shlogo {
+
+background: url(images/logo_s.png) no-repeat center;
+
+}
+
+
+.birthdaylogo {
+
+background: url(images/logo_b.png) no-repeat center;
+
+}
+
+
+.independencelogo {
+
+background: url(images/logo_i.png) no-repeat center;
+
+}
+
+
+.passoverlogo {
+
+background: url(images/logo_po.png) no-repeat center;
+
+}
+
+
+.shavuotlogo {
+
+background: url(images/logo_sv.png) no-repeat center;
+
+}
+
+
+.warlogo {
+
+background: url(images/logo_war.png) no-repeat center;
+
+}
+
+
+.sitelogo {
+
+background-position: center;
+
+background-repeat: no-repeat;
+
+}
+
+
+#userinfo_minor a {
+
+line-height: 30px;
+
+display: inline-block
+
+}
+
+
+#header div#searchbars,
+
+#header div.search-bar {
+
+width: 100%;
+
+text-align: center
+
+}
+
+
+#upload form,
+
+td.label {
+
+text-align: right
+
+}
+
+
+#torrents form,
+
+td.label {
+
+text-align: right
+
+}
+
+
+div#userinfo {
+
+background: rgba(0, 0, 0, 0.5);
+
+position: absolute;
+
+width: 100%;
+
+bottom: 0px;
+
+padding: 3px 0;
+
+text-align: center;
+
+
+}
+
+
+ul#userinfo_major,
+
+ul#userinfo_minor,
+
+ul#userinfo_stats,
+
+ul#userinfo_username {
+
+display: inline !important;
+
+text-align: center
+
+}
+
+
+td.label {
+
+max-width: 150px;
+
+width: 150px;
+
+vertical-align: middle
+
+}
+
+
+td.label-to-left {
+
+max-width: 150px;
+
+width: 150px;
+
+vertical-align: middle;
+
+text-align: left;
+
+}
+
+
+td.ft_cataloguenumber,
+
+td.ft_remastertitle {
+
+width: 33.3%;
+
+max-width: 33.3%
+
+}
+
+
+#taglist tr td {
+
+border: none
+
+}
+
+
+#taglist tr,
+
+#taglist tr td {
+
+/*display: inline;*/
+
+padding: 0
+
+}
+
+
+div#ft_container,
+
+table.layout,
+
+table.layout.border {
+
+font-size: 12px;
+
+margin: 0 auto
+
+}
+
+
+table.layout.border {
+
+border-collapse: separate
+
+}
+
+
+.lightbox,
+
+form.create_form {
+
+text-align: center
+
+}
+
+
+.sidebar table,
+
+.sidebar ul,
+
+.sidebar>div,
+
+div#quickreplytext {
+
+margin-bottom: 5px
+
+}
+
+
+div#add_cover_div:after {
+
+width: 100%;
+
+clear: both
+
+}
+
+
+form.search_form input:focus,
+
+form.search_form input:hover,
+
+select:focus,
+
+select:hover {
+
+box-sizing: border-box;
+
+-moz-box-sizing: border-box;
+
+-webkit-box-sizing: border-box
+
+}
+
+
+form.create_form table {
+
+display: inline-block
+
+}
+
+
+.sidebar.settings_sidebar li {
+
+display: block
+
+}
+
+
+#inbox input[type=search] {
+
+width: 50%;
+
+margin: 2px auto;
+
+display: block;
+
+color: inherit
+
+}
+
+
+#header .new-subscriptions a:hover,
+
+.thin>h2>a[href*="series.php"]:after,
+
+body {
+
+color: #313131
+
+}
+
+
+input[type=submit],
+
+input[type=button] {
+
+margin: 1px;
+
+cursor: pointer
+
+}
+
+
+input[type=submit]:focus,
+
+input[type=submit]:hover,
+
+input[type=button]:focus,
+
+input[type=button]:hover {
+
+-webkit-transition: color .25s ease-out;
+
+transition: color .25s ease-out
+
+}
+
+
+.nobullet {
+
+list-style-type: none
+
+}
+
+
+.shadow {
+
+-webkit-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+
+box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.box,
+
+.main_column,
+
+.forum_index,
+
+.permission_subcontainer,
+
+.movie-item {
+
+-webkit-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+
+box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.no-shadow {
+
+-webkit-box-shadow: 0 0 0;
+
+box-shadow: 0 0 0;
+
+}
+
+
+.box ul.stats.nobullet li {
+
+font-size: .8125rem
+
+}
+
+
+.no-padding {
+
+padding: 0;
+
+}
+
+
+#artist .sidebar img,
+
+#covers img {
+
+z-index: 1
+
+}
+
+
+#taglist tr td a,
+
+.huge-movie-list__movie__tag-list a,
+
+.movie-tooltip__tag,
+
+.sidebar .stats.nobullet a,
+
+.tags a,
+
+a.basic-movie-list__movie__tag,
+
+a.cover-movie-list__movie__tag {
+
+-webkit-border-radius: 10px;
+
+-moz-border-radius: 10px;
+
+border-radius: 10px;
+
+-webkit-transition: background .25s ease-out, color .25s ease-out;
+
+transition: background .25s ease-out, color .25s ease-out;
+
+font-size: .7187rem;
+
+display: inline-block;
+
+margin: 1px 0
+
+}
+
+
+.box.news_post .head,
+
+.main-column .box .head.colhead_dark,
+
+.main_column .box .head.colhead_dark {
+
+border-bottom: 1px solid #2b2b2b
+
+}
+
+
+.sidebar .stats.nobullet a.brackets {
+
+padding: 0 2px
+
+}
+
+
+.box_info .stats.nobullet li a,
+
+.box_info .stats.nobullet li a:hover {
+
+font-weight: 400
+
+}
+
+
+.box.news_post .head,
+
+.forum-post__heading,
+
+.head.colhead_dark,
+
+.main-column .box .head,
+
+.main-column .box .head.colhead_dark,
+
+.main_column .box .head,
+
+.main_column .box .head.colhead_dark,
+
+.panel__heading,
+
+.sidebar .box .head,
+
+.toggleable-search-form__toggler-container,
+
+tr.colhead,
+
+tr.colhead_dark {
+
+font-size: 14px
+
+}
+
+
+span.last_read a:before {
+
+content: "\f100";
+
+font-family: FontAwesome;
+
+line-height: 31px
+
+}
+
+
+.forum_index span.last_read a:before,
+
+table.forum_list span.last_read a:before {
+
+line-height: inherit
+
+}
+
+
+#artist .sidebar img {
+
+width: 100%;
+
+height: auto;
+
+min-width: 100%
+
+}
+
+
+table#collages,
+
+table.collage_table,
+
+table.vote_matches_table {
+
+width: 100%
+
+}
+
+
+td.read:before,
+
+td.unread:before {
+
+content: "\f075";
+
+font-family: FontAwesome
+
+}
+
+
+td.read_sticky:before,
+
+td.unread_sticky:before {
+
+content: "\f08d";
+
+font-family: FontAwesome
+
+}
+
+
+td.read_locked:before {
+
+content: "\f023";
+
+font-family: FontAwesome;
+
+color: #ababab
+
+}
+
+
+div.body table tbody tr td[style="width: 20%"] {
+
+padding: 0;
+
+vertical-align: top
+
+}
+
+
+td.unread_locked:before {
+
+content: "\f023";
+
+font-family: FontAwesome
+
+}
+
+
+td.read_locked_sticky:before,
+
+td.unread_locked_sticky:before {
+
+content: "\f06a";
+
+font-family: FontAwesome
+
+}
+
+
+.forum_list h1,
+
+.forum_list h2,
+
+.forum_list h3,
+
+.forum_list h4 {
+
+font-size: inherit;
+
+font-weight: 700
+
+}
+
+
+.submit.ft_submit span {
+
+font-size: .7187rem;
+
+margin: 0 10px 0 0;
+
+display: block
+
+}
+
+
+form.search_form input[type=submit],
+
+form.search_form input[type=submit]:hover,
+
+form.search_form input[type=button],
+
+form.search_form input[type=button]:hover {
+
+cursor: pointer
+
+}
+
+
+#index .sidebar .stats.nobullet a {
+
+font-weight: inherit;
+
+font-size: inherit
+
+}
+
+
+#forums .forum_list tr td:nth-child(2n) a,
+
+#request_table .rowa td>a,
+
+#request_table .rowb td:first-of-type>a,
+
+table.collage_table tr td:nth-of-type(2) a {
+
+font-weight: 600
+
+}
+
+
+.hidden
+
+
+/*,
+
+div#quickreplytext br*/
+
+{
+
+display: none
+
+}
+
+
+.sidebar .navigation_list li {
+
+padding-right: 1em;
+
+}
+
+
+#inbox .box {
+
+margin-bottom: 20px
+
+}
+
+
+#inbox .box:last-of-type {
+
+margin-bottom: 0
+
+}
+
+
+#userinfo .brackets:after,
+
+#userinfo .brackets:before {
+
+display: none
+
+}
+
+
+#inbox form.send_form #quickpost,
+
+.sidebar select {
+
+margin-bottom: 5px
+
+}
+
+
+.lightbox {
+
+position: fixed;
+
+top: 5%;
+
+left: 5%;
+
+width: 90%;
+
+height: 90%;
+
+overflow: auto;
+
+z-index: 2001
+
+}
+
+
+.curtain {
+
+position: fixed;
+
+top: 0;
+
+left: 0;
+
+width: 100%;
+
+height: 100%;
+
+-moz-opacity: .9;
+
+opacity: .9;
+
+filter: alpha(opacity=90)
+
+}
+
+
+#poll_options li,
+
+li.graph {
+
+display: block;
+
+padding-bottom: 5px
+
+}
+
+
+input[type=text],
+
+input[type=email] {
+
+margin: 1px
+
+}
+
+
+.noty_buttons,
+
+.noty_message,
+
+ul#noty_bottomRight_layout_container li {
+
+-webkit-border-radius: 1px !important;
+
+-moz-border-radius: 1px !important;
+
+border-radius: 1px !important;
+
+text-align: right !important
+
+}
+
+
+.noty_text {
+
+font-weight: bold;
+
+}
+
+
+select {
+
+border-radius: 1px;
+
+-webkit-border-radius: 1px;
+
+-moz-border-radius: 1px
+
+}
+
+
+#searchbars li input,
+
+.search-bar li input {
+
+border-radius: inherit
+
+}
+
+
+div#searchbars ul li:first-of-type form:before,
+
+div.search-bar ul li:first-of-type form:before,
+
+li#searchbar_torrents:first-of-type form:before {
+
+content: "";
+
+display: inline;
+
+font-family: FontAwesome;
+
+float: left;
+
+width: 16px;
+
+height: 25px;
+
+vertical-align: middle;
+
+line-height: 23px;
+
+background: 0 0;
+
+margin-right: 7px;
+
+font-size: 16px
+
+}
+
+
+div#searchbars,
+
+div#searchbars form,
+
+div#searchbars ul,
+
+div#searchbars ul li,
+
+div.search-bar,
+
+div.search-bar form,
+
+div.search-bar ul,
+
+div.search-bar ul li {
+
+background: 0 0
+
+}
+
+
+li#searchbar_torrents {
+
+margin-left: -23px
+
+}
+
+
+form.search_form tr td strong {
+
+font-weight: 400
+
+}
+
+
+input {
+
+border: none
+
+}
+
+
+#header form.search_form {
+
+margin: 0 auto
+
+}
+
+
+#last5 img,
+
+div#alerts,
+
+table {
+
+width: 100%
+
+}
+
+
+#forums h2,
+
+.box h3,
+
+.header h1,
+
+.header h2,
+
+.header h3 {
+
+font-weight: 600;
+
+font-size: 1.125rem
+
+}
+
+
+table#forum_search_cat_list tr td {
+
+display: inline-block
+
+}
+
+
+table.layout.cat_list,
+
+table.layout.cat_list.ft_cat_list {
+
+text-align: center
+
+}
+
+
+table#forum_search_cat_list {
+
+text-align: initial
+
+}
+
+
+table.cat_list,
+
+tr#edition_expand,
+
+tr.cat_list,
+
+tr.pad[id*=torrent_] h3,
+
+tr.pad[id*=torrent_] ul {
+
+text-align: center
+
+}
+
+
+#header b,
+
+#header strong,
+
+#torrent_table b,
+
+#torrent_table strong,
+
+.group_torrent b,
+
+.group_torrent strong {
+
+font-weight: bold
+
+}
+
+
+.box#recommended,
+
+.box.news_post {
+
+font-size: 14px
+
+}
+
+
+.autocomplete-selected,
+
+.autocomplete-suggestions {
+
+border: none;
+
+font-size: .6875rem
+
+}
+
+
+div#last5 a strong {
+
+margin-top: 5px;
+
+display: block
+
+}
+
+
+div#latest5internals:after,
+
+div#latest5normal:after,
+
+div#latest5userreleases:after {
+
+content: "";
+
+display: block;
+
+clear: both
+
+}
+
+
+.forum-post__heading,
+
+.forum_post .colhead_dark td,
+
+.forum_post tr.colhead_dark {
+
+max-height: 32px;
+
+padding-top: 0;
+
+padding-bottom: 0;
+
+height: 32px;
+
+line-height: 32px
+
+}
+
+
+#latest5 .head.colhead_dark,
+
+.forum_post .colhead_dark td,
+
+.forum_post tr.colhead_dark,
+
+a[onclick*=toggle] {
+
+font-weight: inherit
+
+}
+
+
+a[onclick*=toggle] {
+
+font-weight: initial !important
+
+}
+
+
+#last5 img {
+
+height: auto
+
+}
+
+
+td.nobr {
+
+white-space: nowrap
+
+}
+
+
+ul.stats.nobullet li {
+
+display: block
+
+}
+
+
+p {
+
+margin: 0
+
+}
+
+
+#forums h4.min_padding {
+
+font-size: inherit;
+
+font-weight: 700
+
+}
+
+
+.poll .graph .left_poll {}
+
+
+.poll .graph span {
+
+display: block;
+
+height: 19px;
+
+float: left
+
+}
+
+
+.poll .graph .center_poll {
+
+display: block;
+
+height: 4px;
+
+float: right;
+
+}
+
+
+.poll .graph .right_poll {}
+
+
+ul.poll.nobullet li {
+
+display: block;
+
+clear: both
+
+}
+
+
+div.pad#threadpoll {
+
+margin-bottom: 5px
+
+}
+
+
+div.pad#threadpoll p strong {
+
+clear: both;
+
+display: block
+
+}
+
+
+table.torrent_table td {
+
+max-width: 480px
+
+}
+
+
+a[rel=noreferrer] img[style="max-width: 500px;"] {
+
+max-width: 32.86%;
+
+margin: 0
+
+}
+
+
+.torrent_table blockquote {
+
+margin: inherit
+
+}
+
+
+blockquote div[style="margin:20px; margin-top:5px"] {
+
+margin: 5px 0 0 !important
+
+}
+
+
+table#collage_table {
+
+max-width: 100%;
+
+text-align: center;
+
+width: 100%
+
+}
+
+
+table#collage_table img {
+
+min-width: 100%
+
+}
+
+
+#user .main-column table[cellpadding="0"] tr td,
+
+#user .main_column table[cellpadding="0"] tr td,
+
+div.body table tbody tr td[style="width: 20%"] {
+
+width: 20%
+
+}
+
+
+#user .main-column table[cellpadding="0"] tr td a,
+
+#user .main-column table[cellpadding="0"] tr td a img,
+
+#user .main-column table[cellpadding="0"] tr td[colspan="5"],
+
+#user .main_column table[cellpadding="0"] tr td a,
+
+#user .main_column table[cellpadding="0"] tr td a img,
+
+#user .main_column table[cellpadding="0"] tr td[colspan="5"] {
+
+width: 100%
+
+}
+
+
+#torrents .forum_post img {
+
+max-width: 100%
+
+}
+
+
+a img {
+
+-webkit-transition: all .25s linear;
+
+transition: all .25s linear;
+
+-webkit-transform: translateZ(0);
+
+transform: translateZ(0)
+
+}
+
+
+a:hover img {
+
+-ms-filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=50);
+
+filter: alpha(opacity=70);
+
+-moz-opacity: .7;
+
+-khtml-opacity: .7;
+
+opacity: .7
+
+}
+
+
+#user .main-column table[cellpadding="0"] tr td,
+
+#user .main_column table[cellpadding="0"] tr td {
+
+float: left;
+
+display: block;
+
+vertical-align: top
+
+}
+
+
+.log3,
+
+.log5,
+
+.torrent_info_row,
+
+.torrent_table blockquote,
+
+.torrent_table blockquote span,
+
+tr.pad[id*=torrent_] {
+
+font-family: Inconsolata, Arial, Helvetica, sans-serif, monospace
+
+}
+
+
+.forum-post__heading,
+
+tr.pad[id*=torrent_] .colhead,
+
+tr.pad[id*=torrent_] .colhead_dark,
+
+tr.pad[id*=torrent_] .linkbox,
+
+tr.pad[id*=torrent_] h1,
+
+tr.pad[id*=torrent_] h2,
+
+tr.pad[id*=torrent_] h3,
+
+tr.pad[id*=torrent_] h4 {
+
+font-family: 'Segoe UI', Arial, Helvetica, sans-serif, verdana, geneva, lucida, 'lucida grande';
+
+font-size: 14px
+
+}
+
+
+#forums a[rel=noreferrer] img[style="max-width: 500px;"] {
+
+width: inherit
+
+}
+
+
+#blog .head,
+
+#blog .pad,
+
+#inbox .box .head,
+
+#inbox form .send_form #quickpost h3,
+
+#index .main-column .box,
+
+#index .main_column .box,
+
+#reply_box h3,
+
+#wiki .main-column,
+
+#wiki .main-column .box,
+
+#wiki .main_column .box,
+
+.box.filter_torrents .head,
+
+.colhead td,
+
+.colhead_dark td,
+
+.forum-post__heading,
+
+.toggleable-search-form__toggler-container,
+
+thead th,
+
+tr.colhead,
+
+tr.colhead_dark,
+
+.custom_wiki {
+
+font-size: .875rem
+
+}
+
+
+#torrents a[rel=noreferrer] img[style="max-width: 500px;"] {
+
+max-width: 32.673%
+
+}
+
+
+.submit span[style="float:left;"] {
+
+display: inline;
+
+float: none !important;
+
+font-size: 12px
+
+}
+
+
+.filter_torrents div.submit input {
+
+display: inline;
+
+margin: 5px 0
+
+}
+
+
+#staff .box.pad {
+
+background: 0 0 !important
+
+}
+
+
+#forums table.cat_list {
+
+text-align: inherit
+
+}
+
+
+#header li {
+
+display: inline-block
+
+}
+
+
+#header #nav_more ul li,
+
+#header .search-bar__results__list-item {
+
+display: inherit
+
+}
+
+
+.forum_post li,
+
+.news_post .pad li,
+
+table#torrent_details li {
+
+display: list-item
+
+}
+
+
+.show_torrents_link {
+
+border: none;
+
+width: 28px;
+
+height: 28px;
+
+display: block;
+
+}
+
+
+.show_torrents_link:before {}
+
+
+a[onclick]:focus {
+
+outline: 0;
+
+background: 0 0
+
+}
+
+
+#content .sidebar ul.nobullet h2 {
+
+text-align: inherit !important
+
+}
+
+
+#content .thin .sidebar .box.box_image div[style="text-align: center; padding: 10px 0px;"] {
+
+margin: -6px -10px -10px !important;
+
+padding: 0 !important
+
+}
+
+
+#top10 #content .thin p {
+
+width: 100%;
+
+text-align: center;
+
+display: block
+
+}
+
+
+#top10 #content .thin p small,
+
+#top10 #content .thin p strong {
+
+display: inline-block;
+
+font-size: .875rem
+
+}
+
+
+#coverart ul.collage_images li {
+
+width: 20%;
+
+height: auto;
+
+display: inline-block;
+
+vertical-align: top;
+
+float: none
+
+}
+
+
+#coverart ul.collage_images li a,
+
+#coverart ul.collage_images li img {
+
+min-width: 100%;
+
+width: 100%;
+
+height: auto
+
+}
+
+
+#coverart ul.collage_images {
+
+width: 100%
+
+}
+
+
+#content li {
+
+list-style-type: inherit;
+
+list-style-position: inside;
+
+}
+
+
+#content ul:not(.nobullet):not(.bbcode_bar) li {
+
+padding-right: 1em;
+
+}
+
+
+#rules #content li {
+
+display: list-item
+
+}
+
+
+#content .thin div[style="height:140px;"] {
+
+height: auto !important
+
+}
+
+
+.filter_torrents .box.pad.center {
+
+background: 0 0
+
+}
+
+
+.filter_torrents>h3,
+
+.header>.linkbox,
+
+.header>h2,
+
+.linkbox,
+
+.pagination.pagination--bottom.js-pagination,
+
+.pagination.pagination--top.js-pagination,
+
+.thin>h2,
+
+.thin>h3 {
+
+text-align: center !important
+
+}
+
+
+#quickreplytext div.bbcode-btntoolbar,
+
+#taglist,
+
+.alertbar,
+
+.number_column,
+
+.torrent_info_first_block.movie-page__torrent__panel,
+
+.torrent_info_row .bbcode-table-guard a,
+
+h2,
+
+h3 {
+
+text-align: center
+
+}
+
+
+.forum_post td a img:after {
+
+content: " ";
+
+width: 100%;
+
+display: block;
+
+clear: both
+
+}
+
+
+.forum_post td a img,
+
+.linkbox a.brackets {
+
+display: inline-block
+
+}
+
+
+.forum_post td a img {
+
+vertical-align: middle
+
+}
+
+
+.torrent_info_first_block.movie-page__torrent__panel a[href="#"],
+
+.torrent_info_row .linkbox,
+
+.torrent_info_row div#subtitle_manager a {
+
+font-family: 'Segoe UI', Arial, Helvetica, sans-serif, verdana, geneva, lucida, 'lucida grande';
+
+font-size: .75rem
+
+}
+
+
+.torrent_info_row>td {
+
+padding: 15px;
+
+box-sizing: border-box
+
+}
+
+
+.torrent_info_row .bbcode-table-guard a {
+
+width: 100%;
+
+padding: 5px 0;
+
+display: inline-block;
+
+margin: 0 auto
+
+}
+
+
+.forum_post td.body {
+
+padding-right: 10px;
+
+padding-bottom: 10px
+
+}
+
+
+.linkbox a.brackets,
+
+.movie-tooltip__director-list,
+
+.movie-tooltip__ratings,
+
+.movie-tooltip__synopsis,
+
+.movie-tooltip__tags,
+
+.movie-tooltip__title-row,
+
+.movie-tooltip__trailer {
+
+padding-bottom: 5px
+
+}
+
+
+.movie-tooltip__ratings div {
+
+margin-right: 4px
+
+}
+
+
+a.new-subscriptions {
+
+font-weight: 400
+
+}
+
+
+.hnr-inactive,
+
+.hnr-no,
+
+.hnr-yes {
+
+font-weight: 700 !important
+
+}
+
+
+.forum-post__heading img {
+
+max-height: 13px
+
+}
+
+
+span.user_title {
+
+max-height: 32px
+
+}
+
+
+body {
+
+background: #e1e3e4
+
+}
+
+
+/*.torrent td,
+
+blockquote,
+
+pre {
+
+color: #777!important
+
+}*/
+
+.signature {
+
+border-top: 1px dashed rgba(121, 121, 121, .5)
+
+}
+
+
+#forums td {
+
+color: #aaaaaa
+
+}
+
+
+#header {
+
+color: #9a9a9a
+
+}
+
+
+#header a,
+
+tr.inbox-message--unread td a:hover,
+
+tr.unreadpm a:hover {
+
+color: #f7f7f7
+
+}
+
+
+body #wrapper div#header {
+
+background-color: #1a1a1a
+
+}
+
+
+#scontent .box,
+
+.main_column .box,
+
+.main_column2 .box,
+
+.news_post .pad,
+
+.sidebar .box {
+
+background: #D9DBDB
+
+}
+
+
+#header a:focus,
+
+#header a:hover {
+
+color: #3c948b
+
+}
+
+
+#forums .forum_post td,
+
+#forums tr.colhead {
+
+color: #313131
+
+}
+
+
+#forums .colhead_dark,
+
+#forums .colhead_dark td,
+
+#forums tr.colhead td {
+
+color: #f7f7f7
+
+}
+
+
+.head a,
+
+td a {
+
+color: #313131
+
+}
+
+
+#summary .ui-widget-header {
+
+border: none
+
+}
+
+
+a.episode,
+
+a[href*="torrents.php?id"],
+
+a[href*="torrents.php?id"][title="View Torrent"].episode,
+
+a[href*="torrents.php?id"][title="View Torrent"].season:hover,
+
+tr.recentinternalrow>td:first-child {
+
+color: #777
+
+}
+
+
+.ui-tabs .ui-tabs-nav li.ui-state-default,
+
+div.ui-tabs-vertical .ui-tabs-nav li.ui-state-default {
+
+background: #bbb !important
+
+}
+
+
+#blog .box,
+
+.box.pad,
+
+.box.thin.clear,
+
+div.ui-tabs-vertical,
+
+form.search_form,
+
+td {
+
+background: #D9DBDB
+
+}
+
+
+#blog .head,
+
+#inbox .box .head,
+
+#inbox form .send_form #quickpost h3,
+
+#reply_box h3,
+
+.box.filter_torrents .head,
+
+.colhead td,
+
+.colhead_dark td,
+
+tr.colhead,
+
+tr.colhead_dark {
+
+color: #9a9a9a;
+
+border-bottom: 2px solid #1a1a1a
+
+}
+
+
+div#quickreplytext {
+
+padding: 15px;
+
+background: #D0D0D0
+
+}
+
+
+#staffpm #inbox h3,
+
+#staffpm form#messageform,
+
+h2,
+
+h3 {
+
+color: inherit;
+
+border: inherit
+
+}
+
+
+.group td {
+
+background: #d0d0d0
+
+}
+
+
+td {
+
+padding: 8px;
+
+border-bottom: 1px solid #D0D0D0
+
+}
+
+
+.holder {
+
+background: #1a1a1a
+
+}
+
+
+#menu {
+
+position: relative;
+
+background: #1d1d1d;
+
+background: rgba(0, 0, 0, .6);
+
+border: 1px solid transparent
+
+}
+
+
+#menu>ul {
+
+display: inline-block;
+
+margin: 0 auto
+
+}
+
+
+#menu>ul>li {
+
+position: relative;
+
+flex: 1 1 auto
+
+}
+
+
+.nav_dropdown>div {
+
+position: absolute;
+
+background-color: rgba(0, 0, 0, .8);
+
+width: intrinsic;
+
+width: -moz-max-content;
+
+width: -webkit-max-content;
+
+width: -o-max-content;
+
+width: max-content;
+
+padding: 0px 25px;
+
+z-index: 99999;
+
+margin-top: 14px;
+
+left: 50% !important;
+
+right: auto !important;
+
+-ms-transform: translate(-50%, 0) !important;
+
+-webkit-transform: translate(-50%, 0) !important;
+
+-moz-transform: translate(-50%, 0) !important;
+
+-o-transform: translate(-50%, 0) !important;
+
+transform: translate(-50%, 0) !important;
+
+}
+
+
+#nav_links>#links_menu {
+
+width: 120px;
+
+margin-left: -68px
+
+}
+
+
+.nav_dropdown>div>a {
+
+display: none;
+
+height: 32px;
+
+line-height: 32px
+
+}
+
+
+.nav_dropdown:hover>div>a {
+
+display: block
+
+}
+
+
+#menu ul>li>a,
+
+#userinfo_minor a {
+
+color: #fff
+
+}
+
+
+#header div#searchbars {
+
+background: transparent;
+
+padding: 4.5px 0;
+
+display: flex 
 
 /* ── PALETTE 1: Deep Ocean (default — teal/cyan) ─────────── */
 :root,
