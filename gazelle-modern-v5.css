@@ -1,305 +1,138 @@
-/* ============================================================
-   Gazelle Modern V3 SAFE
-   - Keeps original layout (no flex / no structure changes)
-   - Adds modern styling
-   - RTL ONLY on homepage (safe)
-   ============================================================ */
-
-
-/* =========================
-   FONT (better Hebrew)
-   ========================= */
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap');
-
-body {
-  font-family: "Heebo","Segoe UI",Arial,sans-serif;
+/* ===== RESET (safe minimal reset) ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-
-/* =========================
-   GLOBAL VISUAL UPGRADE
-   ========================= */
 body {
-  background: var(--bg0) !important;
-  color: var(--t1);
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+  color: #333;
   line-height: 1.6;
 }
 
-/* smoother text */
-body, #header {
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+/* ===== LAYOUT HELPERS ===== */
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-
-/* =========================
-   LINKS
-   ========================= */
-a {
-  color: var(--t0);
-  transition: color .15s ease;
-}
-
-a:hover {
-  color: var(--ac);
-}
-
-
-/* =========================
-   BOXES (safe upgrade)
-   ========================= */
-.box,
-.sidebar .box,
-.main_column .box,
-.main-column .box {
-  background: linear-gradient(180deg, var(--bg2), var(--bg1)) !important;
-  border: 1px solid var(--b2);
-  border-radius: 10px;
-  box-shadow: 0 4px 16px rgba(0,0,0,.35);
-}
-
-/* headers */
-.head,
-.colhead td,
-.colhead_dark td,
-tr.colhead td,
-tr.colhead_dark td {
-  background: var(--bg4) !important;
-  color: var(--t0) !important;
-  border-bottom: 1px solid var(--b2);
-  font-weight: 700;
-}
-
-
-/* =========================
-   TABLES (safe)
-   ========================= */
-td {
-  border-bottom: 1px solid var(--b1) !important;
-}
-
-tr:hover td {
-  background: var(--ac-dim) !important;
-}
-
-
-/* =========================
-   FORUM IMPROVEMENTS
-   ========================= */
-#forums .forum_index {
-  border-radius: 10px;
-  overflow: hidden;
-  border: 1px solid var(--b2);
-}
-
-#forums .forum_index tr:nth-child(even) td {
-  background: var(--bg1) !important;
-}
-
-#forums .forum_index tr:hover td {
-  background: var(--ac-dim) !important;
-}
-
-
-/* =========================
-   FORUM POSTS
-   ========================= */
-.forum_post {
-  border: 1px solid var(--b2);
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.forum_post td {
-  background: var(--bg2);
-}
-
-/* quotes */
-.forum_post blockquote {
-  background: var(--bg1);
-  border-left: 3px solid var(--ac);
-  padding: 10px;
-}
-
-
-/* =========================
-   BUTTONS
-   ========================= */
-input[type=submit],
-input[type=button],
-.btn {
-  background: var(--bg4);
-  color: var(--t0);
-  border: 1px solid var(--b2);
-  border-radius: 6px;
-  padding: 5px 10px;
-}
-
-input:hover,
-.btn:hover {
-  border-color: var(--ac);
-  background: var(--bg5);
-}
-
-
-/* =========================
-   INPUTS
-   ========================= */
-input,
-textarea,
-select {
-  background: var(--bg1);
-  color: var(--t0);
-  border: 1px solid var(--b2);
-  border-radius: 6px;
-}
-
-input:focus,
-textarea:focus {
-  outline: none;
-  border-color: var(--ac);
-  box-shadow: 0 0 0 2px var(--ac-glow);
-}
-
-
-/* =========================
-   TAGS
-   ========================= */
-#taglist tr td a,
-.tags a,
-.sidebar .stats.nobullet a {
-  background: var(--ac-dim) !important;
-  color: var(--ac) !important;
-  border-radius: 999px;
-  padding: 2px 8px;
-}
-
-#taglist tr td a:hover,
-.tags a:hover {
-  background: var(--ac);
+/* ===== HEADER / NAV ===== */
+header {
+  background: #1e293b;
   color: #fff;
+  padding: 16px 24px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  flex-wrap: wrap; /* prevents breaking on small screens */
 }
 
-
-/* =========================
-   HEADER / MENU (safe)
-   ========================= */
-#menu {
-  background: var(--bg1) !important;
-  border-bottom: 1px solid var(--b2);
+header h1 {
+  font-size: 20px;
+  margin: 0;
 }
 
-#menu ul li a {
-  color: var(--t1);
-  padding: 4px 8px;
-  border-radius: 5px;
+nav {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
-#menu ul li a:hover {
-  background: var(--ac-dim);
-  color: var(--ac);
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
 }
 
-
-/* =========================
-   SEARCH BAR FIX
-   ========================= */
-#header div#searchbars {
-  display: block; /* avoid flex breaking */
-  text-align: center;
+nav a:hover {
+  opacity: 0.7;
 }
 
-
-/* =========================
-   BANNER FIX
-   ========================= */
-#banner {
-  background-size: cover;
-  background-position: center;
+/* ===== GRID SYSTEM ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
+/* ===== CARD ===== */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
 
-/* =========================
-   FOOTER
-   ========================= */
-#footer {
-  border-top: 1px solid var(--b1);
-  color: var(--t2);
-  text-align: center;
+  /* Safe shadow */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+  /* Prevent overflow issues */
+  overflow: hidden;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-
-/* =========================
-   SCROLLBAR
-   ========================= */
-::-webkit-scrollbar {
-  width: 6px;
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
 }
 
-::-webkit-scrollbar-thumb {
-  background: var(--bg4);
-  border-radius: 4px;
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
 }
 
-
-/* ============================================================
-   RTL HOMEPAGE ONLY (SAFE)
-   ============================================================ */
-
-body#index {
-  direction: rtl;
-  text-align: right;
+.card p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
 }
 
-/* DO NOT change layout, only alignment */
-body#index .box,
-body#index td,
-body#index .head {
-  text-align: right;
-}
-
-/* keep floats intact */
-body#index .sidebar {
-  float: right !important;
-}
-
-body#index .main_column,
-body#index .main-column {
-  float: left !important;
-}
-
-/* menu RTL */
-body#index #menu ul {
-  direction: rtl;
-}
-
-/* dropdown fix */
-body#index .nav_dropdown > div {
-  right: 0 !important;
-  left: auto !important;
-}
-
-/* search RTL */
-body#index #searchbars input {
-  direction: rtl;
-  text-align: right;
-}
-
-/* fix numbers */
-body#index .number_column,
-body#index .time,
-body#index .ratio,
-body#index .size {
-  direction: ltr;
+/* ===== BUTTON ===== */
+.btn {
   display: inline-block;
+  margin-top: 12px;
+  padding: 10px 16px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #3b82f6;
+  color: #fff;
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease;
 }
 
-/* forum alignment */
-body#index #forums td {
-  text-align: right;
+.btn:hover {
+  background: #2563eb;
 }
 
-/* icons spacing */
-body#index td.unread:before {
-  margin-left: 6px;
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+
+  font-size: 13px;
+  color: #777;
+}
+
+/* ===== RESPONSIVE FIXES ===== */
+@media (max-width: 600px) {
+  header {
+    align-items: flex-start;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
 }
