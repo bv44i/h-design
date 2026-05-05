@@ -1,211 +1,126 @@
 /* ============================================================
-   Gazelle Modern V3 — Clean RTL Homepage + Palette System
-   Load AFTER base style.css
+   Gazelle Modern V3 SAFE
+   - Keeps original layout (no flex / no structure changes)
+   - Adds modern styling
+   - RTL ONLY on homepage (safe)
    ============================================================ */
+
 
 /* =========================
    FONT (better Hebrew)
    ========================= */
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap');
 
-/* =========================
-   PALETTE (default: Ocean)
-   ========================= */
-:root {
-  --bg0: #0c1318;
-  --bg1: #131e26;
-  --bg2: #192835;
-  --bg3: #213344;
-  --bg4: #2a4056;
-  --bg5: #365068;
-
-  --b1: rgba(140,210,230,.15);
-  --b2: rgba(140,210,230,.26);
-
-  --t0: #eef7fc;
-  --t1: #c0dae8;
-  --t2: #7aaabb;
-
-  --ac: #3dd9c0;
-  --ac-dim: rgba(61,217,192,.15);
-  --ac-glow: rgba(61,217,192,.25);
-
-  --ok: #44d98a;
-  --warn: #f5c542;
-  --err: #f06070;
+body {
+  font-family: "Heebo","Segoe UI",Arial,sans-serif;
 }
 
-/* =========================
-   GLOBAL
-   ========================= */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
 
+/* =========================
+   GLOBAL VISUAL UPGRADE
+   ========================= */
 body {
   background: var(--bg0) !important;
   color: var(--t1);
-  font-family: "Heebo", "Segoe UI", Arial, sans-serif;
   line-height: 1.6;
 }
 
-/* =========================
-   HOMEPAGE RTL ONLY
-   ========================= */
-body#index {
-  direction: rtl;
-  text-align: right;
+/* smoother text */
+body, #header {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-/* layout fix */
-body#index .thin {
-  display: flex;
-  flex-direction: row-reverse;
-  gap: 16px;
-}
-
-/* sidebar + main */
-body#index .sidebar {
-  width: 28%;
-}
-
-body#index .main_column,
-body#index .main-column {
-  width: 72%;
-}
-
-/* =========================
-   HEADER / NAV
-   ========================= */
-#menu {
-  background: var(--bg1);
-  border-bottom: 1px solid var(--b2);
-}
-
-#menu > ul {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-  gap: 6px;
-}
-
-#menu a {
-  color: var(--t1);
-  padding: 6px 10px;
-  border-radius: 6px;
-}
-
-#menu a:hover {
-  background: var(--ac-dim);
-  color: var(--ac);
-}
-
-/* dropdown RTL */
-body#index .nav_dropdown > div {
-  right: 50% !important;
-  left: auto !important;
-  transform: translate(50%, 0);
-}
-
-/* =========================
-   SEARCHBAR
-   ========================= */
-#header div#searchbars {
-  display: flex;
-  justify-content: center;
-}
-
-body#index #searchbars ul {
-  display: flex;
-  flex-direction: row-reverse;
-  gap: 10px;
-}
-
-body#index #searchbars input {
-  text-align: right;
-}
-
-/* =========================
-   BOXES (modern look)
-   ========================= */
-.box,
-.sidebar .box,
-.main_column .box {
-  background: linear-gradient(180deg, var(--bg2), var(--bg1)) !important;
-  border: 1px solid var(--b2);
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,.35);
-}
-
-/* headers */
-.head,
-.colhead td,
-.colhead_dark td {
-  background: var(--bg4) !important;
-  color: var(--t0);
-  border-bottom: 1px solid var(--b2);
-  font-weight: 700;
-}
 
 /* =========================
    LINKS
    ========================= */
 a {
   color: var(--t0);
-  text-decoration: none;
+  transition: color .15s ease;
 }
 
 a:hover {
   color: var(--ac);
 }
 
+
 /* =========================
-   FORUM TABLE
+   BOXES (safe upgrade)
+   ========================= */
+.box,
+.sidebar .box,
+.main_column .box,
+.main-column .box {
+  background: linear-gradient(180deg, var(--bg2), var(--bg1)) !important;
+  border: 1px solid var(--b2);
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,.35);
+}
+
+/* headers */
+.head,
+.colhead td,
+.colhead_dark td,
+tr.colhead td,
+tr.colhead_dark td {
+  background: var(--bg4) !important;
+  color: var(--t0) !important;
+  border-bottom: 1px solid var(--b2);
+  font-weight: 700;
+}
+
+
+/* =========================
+   TABLES (safe)
+   ========================= */
+td {
+  border-bottom: 1px solid var(--b1) !important;
+}
+
+tr:hover td {
+  background: var(--ac-dim) !important;
+}
+
+
+/* =========================
+   FORUM IMPROVEMENTS
    ========================= */
 #forums .forum_index {
-  border-radius: 12px;
+  border-radius: 10px;
   overflow: hidden;
   border: 1px solid var(--b2);
 }
 
-#forums .forum_index td {
-  background: var(--bg2);
-  border-bottom: 1px solid var(--b1);
-}
-
 #forums .forum_index tr:nth-child(even) td {
-  background: var(--bg1);
+  background: var(--bg1) !important;
 }
 
-/* hover effect (RTL aware) */
-#forums .forum_index tr {
-  transition: all .18s ease;
+#forums .forum_index tr:hover td {
+  background: var(--ac-dim) !important;
 }
 
-#forums .forum_index tr:hover {
-  background: var(--ac-dim);
-  transform: translateX(4px);
-}
 
 /* =========================
    FORUM POSTS
    ========================= */
 .forum_post {
-  border-radius: 12px;
-  overflow: hidden;
   border: 1px solid var(--b2);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .forum_post td {
   background: var(--bg2);
 }
 
-/* quote */
+/* quotes */
 .forum_post blockquote {
   background: var(--bg1);
-  border-right: 3px solid var(--ac);
+  border-left: 3px solid var(--ac);
   padding: 10px;
 }
+
 
 /* =========================
    BUTTONS
@@ -216,8 +131,8 @@ input[type=button],
   background: var(--bg4);
   color: var(--t0);
   border: 1px solid var(--b2);
-  border-radius: 8px;
-  padding: 6px 10px;
+  border-radius: 6px;
+  padding: 5px 10px;
 }
 
 input:hover,
@@ -226,39 +141,74 @@ input:hover,
   background: var(--bg5);
 }
 
+
 /* =========================
    INPUTS
    ========================= */
 input,
-textarea {
+textarea,
+select {
   background: var(--bg1);
   color: var(--t0);
   border: 1px solid var(--b2);
-  border-radius: 8px;
-  padding: 6px;
+  border-radius: 6px;
 }
 
 input:focus,
 textarea:focus {
   outline: none;
   border-color: var(--ac);
-  box-shadow: 0 0 0 3px var(--ac-glow);
+  box-shadow: 0 0 0 2px var(--ac-glow);
 }
+
 
 /* =========================
    TAGS
    ========================= */
-.tags a {
-  background: var(--ac-dim);
-  color: var(--ac);
-  padding: 2px 8px;
+#taglist tr td a,
+.tags a,
+.sidebar .stats.nobullet a {
+  background: var(--ac-dim) !important;
+  color: var(--ac) !important;
   border-radius: 999px;
+  padding: 2px 8px;
 }
 
+#taglist tr td a:hover,
 .tags a:hover {
   background: var(--ac);
   color: #fff;
 }
+
+
+/* =========================
+   HEADER / MENU (safe)
+   ========================= */
+#menu {
+  background: var(--bg1) !important;
+  border-bottom: 1px solid var(--b2);
+}
+
+#menu ul li a {
+  color: var(--t1);
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
+#menu ul li a:hover {
+  background: var(--ac-dim);
+  color: var(--ac);
+}
+
+
+/* =========================
+   SEARCH BAR FIX
+   ========================= */
+#header div#searchbars {
+  display: block; /* avoid flex breaking */
+  text-align: center;
+}
+
 
 /* =========================
    BANNER FIX
@@ -266,11 +216,8 @@ textarea:focus {
 #banner {
   background-size: cover;
   background-position: center;
-  min-height: 220px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
+
 
 /* =========================
    FOOTER
@@ -280,6 +227,7 @@ textarea:focus {
   color: var(--t2);
   text-align: center;
 }
+
 
 /* =========================
    SCROLLBAR
@@ -293,6 +241,65 @@ textarea:focus {
   border-radius: 4px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: var(--bg5);
+
+/* ============================================================
+   RTL HOMEPAGE ONLY (SAFE)
+   ============================================================ */
+
+body#index {
+  direction: rtl;
+  text-align: right;
+}
+
+/* DO NOT change layout, only alignment */
+body#index .box,
+body#index td,
+body#index .head {
+  text-align: right;
+}
+
+/* keep floats intact */
+body#index .sidebar {
+  float: right !important;
+}
+
+body#index .main_column,
+body#index .main-column {
+  float: left !important;
+}
+
+/* menu RTL */
+body#index #menu ul {
+  direction: rtl;
+}
+
+/* dropdown fix */
+body#index .nav_dropdown > div {
+  right: 0 !important;
+  left: auto !important;
+}
+
+/* search RTL */
+body#index #searchbars input {
+  direction: rtl;
+  text-align: right;
+}
+
+/* fix numbers */
+body#index .number_column,
+body#index .time,
+body#index .ratio,
+body#index .size {
+  direction: ltr;
+  display: inline-block;
+}
+
+/* forum alignment */
+body#index #forums td {
+  text-align: right;
+}
+
+/* icons spacing */
+body#index td.unread:before {
+  margin-left: 6px;
 }
